@@ -1,0 +1,7 @@
+@startuml
+header Contact Manager
+footer Authors:
+title Entity Relationship Diagram
+'classes, entities and their relationships go here, not really much I can add yet
+class Contact
+@enduml

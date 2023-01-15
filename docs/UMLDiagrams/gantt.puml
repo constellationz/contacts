@@ -1,0 +1,17 @@
+@startgantt
+header Contact Manager
+footer Authors:
+title Gantt Chart
+Project starts 2022-01-12
+[Design] starts 2022-01-12
+[Design] ends 2022-01-19
+[Implement Design] starts 2022-01-19
+[Implement Design] ends 2022-02-02
+[Test and Finalize] starts 2022-02-02
+[Test and Finalize] ends 2022-02-19
+
+--Work Load--
+[Task a (John Doe)] lasts 4 days
+[Task b (Name)] starts 2022-01-20 and lasts 2 days
+[Task c (Name)] starts 2022-01-29 and lasts 1 week and 1 day
+@endgantt
