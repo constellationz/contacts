@@ -1,12 +1,12 @@
 <?php
 	$inData = getRequestInfo();
 
-	$dateCreated = $inData["dateCreated"];
-	$dateLastLoggedIn = $inData["dateLastLoggedIn"];
-	$firstName = $inData["firstName"];
-	$lastName = $inData["lastName"];
-	$login = $inData["login"];
-	$password = $inData["password"];
+	$dateCreated = $inData["DateCreated"];
+	$dateLastLoggedIn = $inData["DateLastLoggedIn"];
+	$firstName = $inData["FirstName"];
+	$lastName = $inData["LastName"];
+	$login = $inData["Login"];
+	$password = $inData["Password"];
 
 	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331");
 	if ($conn->connect_error) 
