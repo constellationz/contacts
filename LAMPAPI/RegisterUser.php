@@ -1,8 +1,6 @@
 <?php
 	$inData = getRequestInfo();
 
-	$dateCreated = $inData["dateCreated"];
-	$dateLastLoggedIn = $inData["dateLastLoggedIn"];
 	$firstName = $inData["firstName"];
 	$lastName = $inData["lastName"];
 	$login = $inData["login"];
@@ -15,12 +13,12 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("INSERT INTO Users (DateCreated, DateLastLoggedIn, FirstName, LastName, Login, Password) VALUES (?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("ss", $dateCreated, $dateLastLoggedIn, $firstName, $lastName, $login, $password);
+		$stmt = $conn->prepare("INSERT INTO Users (FirstName, LastName, Login, Password) VALUES (?, ?, ?, ?)");
+		$stmt->bind_param("ssss", $firstName, $lastName, $login, $password);
 		$stmt->execute();
 		$stmt->close();
 		$conn->close();
-		returnWithError("");
+		returnWithError("var/html");
 	}
 
 	function getRequestInfo()
