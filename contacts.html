@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="editdelete.js"></script>x
+  </head>
+  <body>
+    <header>
+      <h1>Contact Manager</h1>
+    </header>
+    <nav>
+      <input id="searchcontact" type="search" placeholder="Find contact" style="margin:10px">
+      <button type="button" onclick="newContact()">New Contact</button>    </nav>
+    <main>
+      <table class="contact-table">
+        <caption>Your Contacts</caption>
+        <tr>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+        <tr>
+          <td>joe mama</td>
+          <td>CIA</td>
+          <td>911</td>
+          <td>president@cia.com</td>
+          <td><button class="edit-button" type="button" onclick="editContact(event)">Edit</button></td>
+          <td><button class="delete-button" type="button" onclick="deleteContact(event)">Delete</button></td>
+        </tr>
+      </table>
+    </main>
+    <footer class="foot">
+    POOSD small project
+  </footer>
+  </body>
+</html>
