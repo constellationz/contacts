@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/code.js"></script>
 </head>
 <body>
   <header>
@@ -11,16 +12,13 @@
     <img src="userpic.png">
   </header>
   <main class="login-bubble">
-    <form>
       <img src="rotaryphone.png">
       <h2>Your contacts await you.</h2>
-      <p><input id="username" type="text" placeholder="username" style="margin:10px" autofocus required></p>
-      <p><input id="userPassword" type="password" placeholder="password" style="margin:10px" minlength="7" required/></p>
-      <p>
-        <button class="login-button" type="submit">Register</button>
-        <button class="login-button" type="submit">Sign In</button>
-      </p>
-    </form>
+      <input id="loginName" type="text" placeholder="username" style="margin:10px" autofocus>
+      <input id="loginPassword" type="password" placeholder="password" style="margin:10px" minlength="7" />
+      <button class="login-button">Register</button>
+      <button class="login-button" onclick="doLogin();">Sign In</button>
+      <span id="loginResult"></span>
   </main>
   <footer class="foot">
     POOSD small project
