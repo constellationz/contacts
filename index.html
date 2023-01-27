@@ -9,14 +9,16 @@
 <body>
   <header>
     <h1>Contact Manager</h1>
-    <img src="userpic.png">
+    <img src="images/userpic.png">
   </header>
   <main class="login-bubble">
-      <img src="rotaryphone.png">
+      <img src="images/rotaryphone.png">
       <h2>Your contacts await you.</h2>
-      <input id="loginName" type="text" placeholder="username" style="margin:10px" autofocus>
-      <input id="loginPassword" type="password" placeholder="password" style="margin:10px" minlength="7" />
-      <button class="login-button">Register</button>
+      <input id="loginName" type="text" placeholder="Username" style="margin:10px" maxlength="50" autofocus>
+      <input id="loginPassword" type="password" placeholder="Password" style="margin:10px" maxlength="50" />
+      <a href="register.html">
+        <button class="login-button">Register</button>
+      </a>
       <button class="login-button" onclick="doLogin();">Sign In</button>
       <span id="loginResult"></span>
   </main>
