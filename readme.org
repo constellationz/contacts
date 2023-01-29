@@ -1,7 +1,7 @@
 #+title: Contacts Manager
 #+AUTHOR: Hunter Smith
 #+DATE: [2023-01-29]
-#+HTML: <p align="center"><img src="logonobackground.png"/></p>
+#+HTML: <p align="center"><img src="images/logonobackground.png"/></p>
 A web-based solution for keeping track of the important people in your life, built on a LAMP stack.
 
 * 🎬 Getting Started
