@@ -1,0 +1,61 @@
+#+title: Contacts Manager
+#+AUTHOR: Hunter Smith
+#+DATE: [2023-01-29]
+#+HTML: <p align="center"><img src="logonobackground.png"/></p>
+A web-based solution for keeping track of the important people in your life, built on a LAMP stack.
+
+* 🎬 Getting Started
+** Features
+- Anonymous storage of your personal contacts (no email required!)
+- Had a falling out with a friend? Our delete feature makes it easy to remove any contact.
+- Speedy search lets you quickly filter your contacts list.
+** Prerequisites
+- Just head over to [[http://www.theyellowbook4331.com][our website]] and make an account!
+* ☎️ Usage
+** Accessing your Account
+*** Registration
+If you don't already have an account, simply click the "Register" button on the [[http://www.theyellowbook4331.com][the home page]], and enter your information.
+
+[picture of the registration pop up here]
+
+*** Logging In
+To login, navigate to the [[http://www.theyellowbook4331.com][the home page]], and enter the username and password you used when registering.
+
+[picture of home page with example login info]
+
+** Managing Contacts
+*** Adding Contacts
+On your first login, you will be greeted by an empty page of contacts. To add contacts, click the "Add contact" button.
+
+[image of circled add contact button here]
+
+Then, fill in the info you wish to add for that contact.
+
+[image of add contact popup here]
+
+*** Editing an Existing Contact
+To edit an existing contact, use the "Edit" button next to the contact you wish to edit.
+
+[image of contact being edited here]
+
+*** Deleting a Contact
+You can delete a contact by clicking the "Delete" button next to the contact you would like to delete.
+After clicking "Delete", a popup will appear asking if you really wish to delete the contact, click "Delete" if you
+really want to remove the contact.
+
+[image of delete confirmation here.]
+
+*** Searching Contacts
+**** Search by name
+**** Search by email
+**** Search by phone
+* ⚙ Built With
+- [[https://www.linode.com/][linode]] web server
+- [[https://www.mysql.com/][MySQL]] database
+- PHP + [[https://jquery.com/][jQuery]] + CSS + HTML
+* 📝 Authors
+- [[https://github.com/constellationz][@constellaztionz]], project and server manager
+- [[https://github.com/hunt3r-s][@hunt3r-s]], front-end
+- [[https://github.com/koxborough][@koxborough]], API and database
+- [[https://github.com/SopaKitchen][@SopaKitchen]], API and database
+* ✅ Acknowledgements
