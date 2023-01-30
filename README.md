@@ -49,6 +49,7 @@ Use the search dialog to search your contacts by name, email, and phone number.
 
 - [@constellationz](https://github.com/constellationz) Project manager and server manager
 - [@hunt3r-s](https://github.com/hunt3r-s) Front-end and JavaScript
+- [@CLMMS}(https://github.com/CLMMS) Front-end and JavaScript
 - [@koxborough](https://github.com/koxborough) API and database
 - [@SopaKitchen](https://github.com/SopaKitchen) API and database
 
