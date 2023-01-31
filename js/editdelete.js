@@ -22,10 +22,10 @@ function saveContact(event) {
     var phone = row.querySelector("td:nth-child(3) input").value;
     var email = row.querySelector("td:nth-child(4) input").value;
     //update the table with the new data
-    row.querySelector("td:nth-child(1)").textContent = name;
-    row.querySelector("td:nth-child(2)").textContent = company;
-    row.querySelector("td:nth-child(3)").textContent = phone;
-    row.querySelector("td:nth-child(4)").textContent = email;
+    row.querySelector("td:nth-child(1)").innerHTML = name;
+    row.querySelector("td:nth-child(2)").innerHTML = company;
+    row.querySelector("td:nth-child(3)").innerHTML = phone;
+    row.querySelector("td:nth-child(4)").innerHTML = email;
     //change the save button back to an edit button
     event.target.innerHTML = "Edit";
     event.target.removeEventListener("click", saveContact);

@@ -93,6 +93,54 @@ function doRegister()
 
 }
 
+function loadContacts() 
+{
+	let tmp = {userId:userId};
+
+	let jsonPayload = JSON.stringify( tmp );
+	
+	let url = urlBase + '/GetAllContacts.' + extension;
+
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				let json = JSON.parse(xhr.response);
+				let contacts = json.results;
+				let table = document.getElementById("table");
+
+				for (contact of contacts)
+				{
+					let numRows = table.rows.length;
+					let row = table.insertRow(numRows);
+					let cell1 = row.insertCell(0);
+					let company = row.insertCell(1);
+					let cell2 = row.insertCell(2);
+					let cell3 = row.insertCell(3);
+					let cell4 = row.insertCell(4);
+					let cell5 = row.insertCell(5);
+					cell1.innerHTML = contact.name;
+					cell2.innerHTML = contact.phone;
+					cell3.innerHTML = contact.email;
+					cell4.innerHTML = '<button class="edit-button" type="button" onclick="editContact(event)">Edit</button>';
+					cell5.innerHTML = '<button class="delete-button" type="button" onclick="deleteContact(event)">Delete</button>';
+					company.innerHTML = "Apple";
+				}
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		windows.alert("Something went wrong...");
+	}
+}
+
 function saveCookie()
 {
 	let minutes = 20;
@@ -130,7 +178,7 @@ function readCookie()
 	}
 	else
 	{
-		document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
+		// document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
 	}
 }
 
