@@ -5,10 +5,10 @@ function editContact(event) {
     var phone = row.querySelector("td:nth-child(3)").textContent;
     var email = row.querySelector("td:nth-child(4)").textContent;
     //add the input fields to the row to allow inline editing
-    row.querySelector("td:nth-child(1)").innerHTML = "<input type='text' value='"+name+"'>";
-    row.querySelector("td:nth-child(2)").innerHTML = "<input type='text' value='"+company+"'>";
-    row.querySelector("td:nth-child(3)").innerHTML = "<input type='text' value='"+phone+"'>";
-    row.querySelector("td:nth-child(4)").innerHTML = "<input type='text' value='"+email+"'>";
+    row.querySelector("td:nth-child(1)").innerHTML = '<input name="txtupdate_Name"  disabled id="txtupdate_Name" value="' + name + '"/>';
+    row.querySelector("td:nth-child(2)").innerHTML = '<input name="txtupdate_Company"  disabled id="txtupdate_Company" value="' + company + '"/>';
+    row.querySelector("td:nth-child(3)").innerHTML = '<input name="txtupdate_Phone"  disabled id="txtupdate_Phone" value="' + phone + '"/>';
+    row.querySelector("td:nth-child(4)").innerHTML = '<input name="txtupdate_Email"  disabled id="txtupdate_Email" value="' + email + '"/>';
     //change the edit button to a save button
     event.target.innerHTML = "Save";
     event.target.removeEventListener("click", editContact);
