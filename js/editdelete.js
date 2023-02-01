@@ -34,11 +34,39 @@ function saveContact(event) {
 
 
 
-function deleteContact(event) {
+function deleteContact(event, id) {
     if (confirm("Are you sure you want to delete this contact?")) {
         var row = event.target.parentNode.parentNode;
+        deleteFromDatabase(id);
         row.parentNode.removeChild(row);
     }
+}
+
+function deleteFromDatabase(id)
+{
+    let tmp = {id:id};
+	let jsonPayload = JSON.stringify( tmp );
+	
+	let url = urlBase + '/DeleteContact.' + extension;
+
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				// alert("The contact has been deleted");
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		windows.alert("Something went wrong...");
+	}
 }
 
 function newContact(){

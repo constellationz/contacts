@@ -96,7 +96,6 @@ function doRegister()
 function loadContacts() 
 {
 	let tmp = {userId:userId};
-
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/GetAllContacts.' + extension;
@@ -114,7 +113,21 @@ function loadContacts()
 				let contacts = json.results;
 				let table = document.getElementById("table");
 
-				for (contact of contacts)
+				table.innerHTML = "";
+
+				let header = table.createTHead();
+				let rowTemp = header.insertRow(0);
+				let headerCell1 = rowTemp.insertCell(0);
+				let headerCell2 = rowTemp.insertCell(1);
+				let headerCell3 = rowTemp.insertCell(2);
+				let headerCell4 = rowTemp.insertCell(3);
+				headerCell1.innerHTML = "Name";
+				headerCell2.innerHTML = "Company";
+				headerCell3.innerHTML = "Phone";
+				headerCell4.innerHTML = "Email";
+				rowTemp.classList.add("top-row");
+
+				for (let contact of contacts)
 				{
 					let numRows = table.rows.length;
 					let row = table.insertRow(numRows);
@@ -128,7 +141,7 @@ function loadContacts()
 					cell2.innerHTML = contact.phone;
 					cell3.innerHTML = contact.email;
 					cell4.innerHTML = '<button class="edit-button" type="button" onclick="editContact(event)">Edit</button>';
-					cell5.innerHTML = '<button class="delete-button" type="button" onclick="deleteContact(event)">Delete</button>';
+					cell5.innerHTML = `<button class="delete-button" type="button" onclick="deleteContact(event, ${contact.id});">Delete</button>`;
 					company.innerHTML = "Apple";
 				}
 			}

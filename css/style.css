@@ -105,6 +105,11 @@ th {
     color: white;
 }
 
+.top-row {
+    background-color: #87637c;
+    color: white;
+}
+
 /* Edit and delete button styling */
 .edit-button, .delete-button {
     background-color: #878063;
