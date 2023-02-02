@@ -1,3 +1,10 @@
+const fullscreenDiv = document.getElementById('fullscreen-div');
+const modal = document.getElementById('modal');
+const addBtn = document.getElementById('add-btn');
+const closeBtn = document.getElementById('close-btn');
+const form = document.getElementById('modal');
+const saveBtn = document.getElementById('save-btn');
+
 function editContact(event) {
     var row = event.target.parentNode.parentNode;
     var name = row.querySelector("td:nth-child(1)").textContent;
@@ -70,10 +77,10 @@ function deleteFromDatabase(id)
 }
 
 function newContact(){
-    var name = prompt("Enter the contact's name:");
-    var company = prompt("Enter the contact's company:");
-    var phone = prompt("Enter the contact's phone number:");
-    var email = prompt("Enter the contact's email:");
+    var name = document.getElementById("enter-name").value;
+    var company = document.getElementById("enter-company").value;
+    var phone = document.getElementById("enter-phone").value;
+    var email = document.getElementById("enter-email").value;
 
     var table = document.querySelector(".contact-table");
     var newRow = table.insertRow(-1);
@@ -90,4 +97,40 @@ function newContact(){
     emailCell.innerHTML = email;
     editCell.innerHTML = "<button class='edit-button' type='button' onclick='editContact(event)'>Edit</button>";
     deleteCell.innerHTML = "<button class='delete-button' type='button' onclick='deleteContact(event)'>Delete</button>";
-      }
+}
+
+// UI class
+class UI{
+    static showModal(){
+        modal.style.display = "block";
+        fullscreenDiv.style.display = "block";
+    }
+
+    static closeModal(){
+        modal.style.display = "none";
+        fullscreenDiv.style.display = "none";
+    }
+}
+
+// DOM Content Loaded
+window.addEventListener('DOMContentLoaded', () => {
+    eventListeners();
+});
+
+// event listeners
+function eventListeners(){
+    // show add item modal
+    addBtn.addEventListener('click', () => {
+        form.reset();
+        document.getElementById('modal-title').innerHTML = "Add Content";
+        UI.showModal();
+    });
+
+    // close add item modal
+    closeBtn.addEventListener('click', UI.closeModal);
+
+	saveBtn.addEventListener('click', () => {
+        location.reload();
+        UI.closeModal();
+    });
+}
