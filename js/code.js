@@ -174,7 +174,8 @@ function addContact()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				window.location.href = "index.html";
+				// Commented out on purpose, copied from Leinecker's code
+				// window.location.href = "index.html";
 			}
 		};
 		xhr.send(jsonPayload);
@@ -219,7 +220,7 @@ function readCookie()
 	
 	if( userId < 0 )
 	{
-		// window.location.href = "index.html";
+		window.location.href = "index.html";
 	}
 	else
 	{
