@@ -18,19 +18,13 @@
 </head>
 <body onload = "loadContacts();">
     <header>
-        <div><h1>Contact Manager</h1></div>
-        <div><button class="logout-button" type="button" onclick="">←</button></div>
+      <h1>Contact Manager</h1>
     </header>
     <nav>
-        <div class="nav-left">
-            <input id="searchcontact" type="search" placeholder="Find contact" style="margin:10px">
-            <button class=reset-button type="button" onclick="newContact()">❌</button>
-            <button class=search-button type="button" onclick="newContact()">🔍</button>
-        </div>
-        <div class="nav-right">
-            <button type="button" onclick="newContact()">New Contact</button>
-        </div>
-
+      <input id="searchcontact" type="search" placeholder="Find contact" style="margin:10px">
+      <button type = "button" class = "btn" id = "add-btn">
+        <span><i class = "fas fa-plus"></i> Add Contact</span>
+      </button>
     </nav>
     <main>
         <table class="contact-table" id="table">
