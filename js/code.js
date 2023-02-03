@@ -113,19 +113,7 @@ function loadContacts()
 				let contacts = json.results;
 				let table = document.getElementById("table");
 
-				table.innerHTML = "";
-
-				let header = table.createTHead();
-				let rowTemp = header.insertRow(0);
-				let headerCell1 = rowTemp.insertCell(0);
-				let headerCell2 = rowTemp.insertCell(1);
-				let headerCell3 = rowTemp.insertCell(2);
-				let headerCell4 = rowTemp.insertCell(3);
-				headerCell1.innerHTML = "Name";
-				headerCell2.innerHTML = "Company";
-				headerCell3.innerHTML = "Phone";
-				headerCell4.innerHTML = "Email";
-				rowTemp.classList.add("top-row");
+				resetTable();
 
 				for (let contact of contacts)
 				{
@@ -185,6 +173,84 @@ function addContact()
 		windows.alert("Something went wrong...");
 	}
 
+}
+
+function searchContacts()
+{
+	document.getElementById("resetSearch").hidden = false;
+	let search = document.getElementById("searchbar").value;
+
+	let tmp = {search:search,userId:userId};
+	let jsonPayload = JSON.stringify( tmp );
+	
+	let url = urlBase + '/SearchContacts.' + extension;
+
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				let json = JSON.parse(xhr.response);
+				let contacts = json.results;
+				let table = document.getElementById("table");
+
+				resetTable();
+
+				for (let contact of contacts)
+				{
+					let numRows = table.rows.length;
+					let row = table.insertRow(numRows);
+					let cell1 = row.insertCell(0);
+					let company = row.insertCell(1);
+					let cell2 = row.insertCell(2);
+					let cell3 = row.insertCell(3);
+					let cell4 = row.insertCell(4);
+					let cell5 = row.insertCell(5);
+					cell1.innerHTML = contact.name;
+					cell2.innerHTML = contact.phone;
+					cell3.innerHTML = contact.email;
+					cell4.innerHTML = '<button class="edit-button" type="button" onclick="editContact(event)">Edit</button>';
+					cell5.innerHTML = `<button class="delete-button" type="button" onclick="deleteContact(event, ${contact.id});">Delete</button>`;
+					company.innerHTML = "Apple";
+				}
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		windows.alert("Something went wrong...");
+	}
+
+	document.getElementById("searchbar").value = "";
+}
+
+function resetSearch()
+{
+	document.getElementById("resetSearch").hidden = true;
+	loadContacts();
+}
+
+function resetTable()
+{
+	let table = document.getElementById("table");
+	table.innerHTML = "";
+
+	let header = table.createTHead();
+	let rowTemp = header.insertRow(0);
+	let headerCell1 = rowTemp.insertCell(0);
+	let headerCell2 = rowTemp.insertCell(1);
+	let headerCell3 = rowTemp.insertCell(2);
+	let headerCell4 = rowTemp.insertCell(3);
+	headerCell1.innerHTML = "Name";
+	headerCell2.innerHTML = "Company";
+	headerCell3.innerHTML = "Phone";
+	headerCell4.innerHTML = "Email";
+	rowTemp.classList.add("top-row");
 }
 
 function saveCookie()

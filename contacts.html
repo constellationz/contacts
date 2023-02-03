@@ -21,12 +21,12 @@
       <h1>Contact Manager</h1>
     </header>
       <div class="nav-left">
-        <input id="searchcontact" type="search" placeholder="Find contact" style="margin:10px">
-        <button class=search-button type="button" onclick="search()">
+        <input id="searchbar" type="search" placeholder="Find contact" style="margin:10px">
+        <button class=search-button type="button" onclick="searchContacts();">
           <span><i class="fa fa-search" aria-hidden="true"></i> Search</span>
         </button>
-        <button class=reset-button type="button" onclick="clear()">
-          <span><i class="fa fa-trash" aria-hidden="true"></i> Clear</span>
+        <button class=reset-button type="button" onclick="resetSearch();" id="resetSearch" hidden>
+          <span><i class="fa fa-trash" aria-hidden="true"></i> Reset Search</span>
         </button>
       </div>
       <div class="nav-right">
