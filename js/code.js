@@ -197,6 +197,19 @@ function fillTable(json)
 	let table = document.getElementById("table");
 	table.innerHTML = "";
 
+	if (json.error === "User Has No Records")
+	{
+		let caption = document.getElementById("table").createCaption();
+		caption.innerHTML = "You have no records!";
+		return;
+	}
+	else if (json.error === "No Records Found")
+	{
+		let caption = document.getElementById("table").createCaption();
+		caption.innerHTML = "There are no records with that search!";
+		return;
+	}
+
 	let header = table.createTHead();
 	let rowTemp = header.insertRow(0);
 	let headerCell1 = rowTemp.insertCell(0);
