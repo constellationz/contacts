@@ -2,12 +2,12 @@ body {
     font-family: monospace, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #636a87;
+    background-color: #eee975;
 }
 
 /* Header styling */
 header {
-    background-color: #878063;
+    background-color: #504dc8;
     color: white;
     padding: 20px;
     text-align: center;
@@ -15,6 +15,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 
 img {
     width: 24px;
@@ -33,7 +34,7 @@ main {
 
 /* Login form styling */
 form {
-    background-color: #878063;
+    background-color: #e6ca22;
     padding: 20px;
     border-radius: 10px;
     width: 80%;
@@ -55,13 +56,13 @@ input {
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #000003;
 }
 
 /* Login button styling */
 button {
-    background-color: #87637c;
-    color: white;
+    background-color: #cedafd;
+    color: black;
     border: none;
     padding: 10px 15px;
     font-size: 16px;
@@ -72,10 +73,9 @@ button {
 
 /* Nav styling */
 nav {
-    background-color: #878063;
+    background-color: #e6ca22;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
 }
 
 #searchcontact {
@@ -83,7 +83,7 @@ nav {
     padding: 10px;
     font-size: 16px;
     border-radius: 20px;
-    width: 40%;
+    width: 80%;
 }
 
 /* Table styling */
@@ -95,19 +95,80 @@ nav {
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #000003;
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #87637c;
+    background-color: #cedafd;
+    color: black;
+}
+
+.header-left{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-start;
+}
+
+.header-right{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-start;
+}
+
+.nav-left{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-start;}
+.nav-right{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-end;}
+
+.logout-button{
+    background-color: #504dc8;
     color: white;
+    border: none;
+    padding: 0px 0px;
+    font-size: 32px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.search-button{
+    background-color: #e6ca22;
+    color: white;
+    border: none;
+    padding: 0px 0px;
+    font-size: 18px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.reset-button{
+    background-color: #e6ca22;
+    color: white;
+    border: none;
+    padding: 0px 0px;
+    font-size: 18px;
+    border-radius: 0px;
+    cursor: pointer;
 }
 
 /* Edit and delete button styling */
-.edit-button, .delete-button {
-    background-color: #878063;
+.edit-button{
+    background-color: #504dc8;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #4c0109;
     color: white;
     border: none;
     padding: 5px 10px;
