@@ -188,6 +188,7 @@ function searchContacts()
 function resetSearch()
 {
 	document.getElementById("resetSearch").hidden = true;
+	document.getElementById("searchbar").value = "";
 	loadContacts();
 }
 
