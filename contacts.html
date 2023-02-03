@@ -4,15 +4,24 @@
     <meta charset="utf-8">
     <title>Contacts</title>
     <link rel="stylesheet" href="style.css">
-    <script src="editdelete.js"></script>x
+    <script src="editdelete.js"></script>
   </head>
   <body>
     <header>
-      <h1>Contact Manager</h1>
+        <div><h1>Contact Manager</h1></div>
+        <div><button class="logout-button" type="button" onclick="">←</button></div>
     </header>
     <nav>
-      <input id="searchcontact" type="search" placeholder="Find contact" style="margin:10px">
-      <button type="button" onclick="newContact()">New Contact</button>    </nav>
+        <div class="nav-left">
+            <input id="searchcontact" type="search" placeholder="Find contact" style="margin:10px">
+            <button class=reset-button type="button" onclick="newContact()">❌</button>
+            <button class=search-button type="button" onclick="newContact()">🔍</button>
+        </div>
+        <div class="nav-right">
+            <button type="button" onclick="newContact()">New Contact</button>
+        </div>
+
+    </nav>
     <main>
       <table class="contact-table">
         <caption>Your Contacts</caption>
@@ -33,7 +42,7 @@
       </table>
     </main>
     <footer class="foot">
-    POOSD small project
-  </footer>
+        POOSD small project
+    </footer>
   </body>
 </html>
