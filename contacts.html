@@ -20,11 +20,20 @@
     <header>
       <h1>Contact Manager</h1>
     </header>
-    <nav>
-      <input id="searchcontact" type="search" placeholder="Find contact" style="margin:10px">
-      <button type = "button" class = "btn" id = "add-btn">
-        <span><i class = "fas fa-plus"></i> Add Contact</span>
-      </button>
+      <div class="nav-left">
+        <input id="searchcontact" type="search" placeholder="Find contact" style="margin:10px">
+        <button class=search-button type="button" onclick="search()">
+          <span><i class="fa fa-search" aria-hidden="true"></i> Search</span>
+        </button>
+        <button class=reset-button type="button" onclick="clear()">
+          <span><i class="fa fa-trash" aria-hidden="true"></i> Clear</span>
+        </button>
+      </div>
+      <div class="nav-right">
+        <button type = "button" class = "btn" id = "add-btn">
+          <span><i class = "fas fa-plus"></i> Add Contact</span>
+        </button>
+      </div>
     </nav>
     <main>
         <table class="contact-table" id="table">
@@ -62,7 +71,9 @@
                       <input type = "text" placeholder="Company Inc." class = "form-control" id = "enter-company" name = "company">
                   </div>
                   <div class = "modal-col">
-                      <button type = "submit" id = "save-btn">Save</button>
+                      <button type = "submit" id = "save-btn">
+                        <span><i class="fa fa-floppy-disk" aria-hidden="true"></i> Save</span>
+                      </button>
                   </div>
             </div>
         </div>
