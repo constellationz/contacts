@@ -13,7 +13,7 @@
 	else
 	{
 		$stmt = $conn->prepare("select ID, Name, Phone, Email from Contacts where UserID=? limit ? offset ?");
-		$stmt->bind_param("i", $inData["userId"]);
+		$stmt->bind_param("iii", $inData["userId"], $inData["amount"], $inData["page"]);
 		$stmt->execute();
 		
 		$result = $stmt->get_result();
