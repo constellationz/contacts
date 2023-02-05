@@ -1,0 +1,358 @@
+---
+swagger: "2.0"
+info:
+  description: Documentation for the Contacts website
+  version: 1.0.0
+  title: Contacts
+  contact:
+    email: sophiad@knights.ucf.edu
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+host: theyellowbookcop4331.com
+basePath: /LAMPAPI
+schemes:
+- http
+paths:
+  /Login.php:
+    post:
+      tags:
+      - Users
+      summary: Log into the contacts app
+      description: Logs into contacts app
+      operationId: login
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: Login
+        description: Login with Login and Password
+        required: false
+        schema:
+          $ref: '#/definitions/Login'
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: URL Not Found
+        "500":
+          description: Server Error
+  /AddContact.php:
+    post:
+      tags:
+      - Contacts
+      summary: Add a contact to the database
+      description: Adds a contact to the contact app database
+      operationId: addContact
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: AddContact
+        description: Add a contact with Name, UserId, Phone, and Email
+        required: false
+        schema:
+          $ref: '#/definitions/Contact'
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: URL Not Found
+        "500":
+          description: Server Error
+  /SearchContacts.php:
+    post:
+      tags:
+      - Contacts
+      summary: Searches contacts
+      description: Searches contacts with partial matching
+      operationId: searchContacts
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: search
+        description: The search query to pass to the server
+        required: false
+        schema:
+          $ref: '#/definitions/Search'
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: URL Not Found
+        "500":
+          description: Server Error
+  /RegisterUser.php:
+    post:
+      tags:
+      - Users
+      summary: Register a new user to the database
+      description: Registers a new user
+      operationId: registerUser
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: RegisterUser
+        description: Register a user with Login and Password
+        required: false
+        schema:
+          $ref: '#/definitions/User'
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: URL Not Found
+        "500":
+          description: Server Error
+  /DeleteContact.php:
+    post:
+      tags:
+      - Contacts
+      summary: Deletes a contact from the database
+      description: Deletes an existing contact
+      operationId: deleteContact
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: DeleteContact
+        description: Deletes a contact
+        required: false
+        schema:
+          $ref: '#/definitions/Delete'
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: URL Not Found
+        "500":
+          description: Server Error
+  /EditContact.php:
+    post:
+      tags:
+      - Contacts
+      summary: Edits an already existing contact from the database
+      description: Edits an existing contact
+      operationId: editContact
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: EditContact
+        description: Edits a contact
+        required: false
+        schema:
+          $ref: '#/definitions/Edit'
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: URL Not Found
+        "500":
+          description: Server Error
+  /GetAllContacts.php:
+    post:
+      tags:
+      - Contacts
+      summary: Gets all contacts for specific user
+      description: Get all contacts for specific user
+      operationId: getAllContacts
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: GetAllContacts
+        description: Gets all contacts
+        required: false
+        schema:
+          $ref: '#/definitions/GetAll'
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: URL Not Found
+        "500":
+          description: Server Error
+  /GetContactsByLetter.php:
+    post:
+      tags:
+      - Contacts
+      summary: Returns Contacts that name start with specified letter
+      description: Get all contacts for specific user that start with specified letter
+      operationId: getContactsByLetter
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: GetContactsByLetter
+        description: Gets all contacts that start with specified letter
+        required: false
+        schema:
+          $ref: '#/definitions/Search'
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: URL Not Found
+        "500":
+          description: Server Error
+  /GetContactsFromPage.php:
+    post:
+      tags:
+      - Contacts
+      summary: Returns Contacts on specified page
+      description: Get contact in specified interval on specified page
+      operationId: getContactsFromPage
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: GetContactsFromPage
+        description: Gets contacts on specific page with specific interval
+        required: false
+        schema:
+          $ref: '#/definitions/Page'
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: URL Not Found
+        "500":
+          description: Server Error
+definitions:
+  Login:
+    type: object
+    required:
+    - login
+    - password
+    properties:
+      login:
+        type: string
+        example: Fred
+      password:
+        type: string
+        example: Secret
+  Contact:
+    type: object
+    required:
+    - email
+    - name
+    - phone
+    - userId
+    properties:
+      name:
+        type: string
+        example: Sophia
+      phone:
+        type: string
+        example: 800-588-2309
+      email:
+        type: string
+        example: sophiad@knights.ucf.edu
+      userId:
+        type: integer
+        example: 1
+  Search:
+    type: object
+    required:
+    - search
+    - userId
+    properties:
+      search:
+        type: string
+        example: So
+      userId:
+        type: integer
+        example: 2
+  User:
+    type: object
+    required:
+    - firstName
+    - lastName
+    - login
+    - password
+    properties:
+      firstName:
+        type: string
+        example: Sophia
+      lastName:
+        type: string
+        example: Bossman
+      login:
+        type: string
+        example: Fred
+      password:
+        type: string
+        example: Secret
+  Delete:
+    type: object
+    required:
+    - id
+    properties:
+      id:
+        type: integer
+        example: 3
+  Edit:
+    type: object
+    required:
+    - email
+    - id
+    - name
+    - phone
+    properties:
+      name:
+        type: string
+        example: Sophia
+      phone:
+        type: string
+        example: 800-588-2309
+      email:
+        type: string
+        example: sophiad@knights.ucf.edu
+      id:
+        type: integer
+        example: 3
+  GetAll:
+    type: object
+    required:
+    - userId
+    properties:
+      userId:
+        type: integer
+        example: 3
+  Page:
+    type: object
+    required:
+    - amount
+    - page
+    - userId
+    properties:
+      userId:
+        type: integer
+        example: 1
+      amount:
+        type: integer
+        example: 10
+      page:
+        type: integer
+        example: 1
