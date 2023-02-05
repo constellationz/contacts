@@ -4,6 +4,8 @@
 	
 	$searchResults = "";
 	$searchCount = 0;
+	$amountOnPage = $inData["amount"];
+	$pageOffset = $inData["page"]*$amountOnPage;
 
 	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331");
 	if ($conn->connect_error) 
@@ -13,7 +15,7 @@
 	else
 	{
 		$stmt = $conn->prepare("select ID, Name, Phone, Email from Contacts where UserID=? limit ? offset ?");
-		$stmt->bind_param("iii", $inData["userId"], $inData["amount"], $inData["page"]);
+		$stmt->bind_param("iii", $inData["userId"], $amountOnPage, $pageOffset);
 		$stmt->execute();
 		
 		$result = $stmt->get_result();
