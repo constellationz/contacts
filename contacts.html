@@ -44,9 +44,9 @@
       <footer class="foot">
           POOSD small project
       </footer>
-    <!-- form modal -->
+    <!-- add form modal -->
     <div id = "fullscreen-div"></div>
-    <form class = "modal" id = "modal" onsubmit="addContact();">
+    <form class = "modal" id = "modal-add" onsubmit="addContact();">
         <div class = "modal-content">
             <div class = "modal-head">
                 <h3 id = "modal-title">Add Contact</h3>
@@ -79,7 +79,42 @@
             </div>
         </div>
     </form>
-    <!-- end of form modal -->
+    <!-- end of add form modal -->
+   <!-- edit form modal -->
+   <div id = "fullscreen-div"></div>
+   <form class = "modal" id = "modal-edit" onsubmit="editfromDatabase();">
+    <div class = "modal-content">
+        <div class = "modal-head">
+            <h3 id = "modal-title">Edit Contact</h3>
+            <button type="button" id = "close-edit-btn">
+                <i class = "fas fa-times"></i>
+            </button>
+        </div>
+        <span id="rowId" hidden></span>
+        <div class = "modal-main">
+              <div class = "modal-col">
+                  <label for="">Name</label>
+                  <input type = "text" placeholder="" class = "form-control" id = "edit-name">
+              </div>
+              <div class = "modal-col">
+                  <label for="">Phone Number</label>
+                  <input type = "text" placeholder="" class = "form-control" id = "edit-phone">
+              </div>
+              <div class = "modal-col">
+                  <label for="">Email</label>
+                  <input type = "email" placeholder="" class = "form-control" id = "edit-email">
+              </div>
+              <div class = "modal-col">
+                  <label for="">Company</label>
+                  <input type = "text" placeholder="" class = "form-control" id = "edit-company">
+              </div>
+              <div class = "modal-col">
+                  <button type = "submit" id = "save-edit">Save Edit</button>
+              </div>
+        </div>
+    </div>
+</form>
+<!-- end of edit form modal -->
     <script src = "js/editdelete.js"></script>
     </body>
 </html>

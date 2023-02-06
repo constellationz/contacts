@@ -236,7 +236,7 @@ function fillTable(json)
 		cell1.innerHTML = contact.name;
 		cell2.innerHTML = contact.phone;
 		cell3.innerHTML = contact.email;
-		cell4.innerHTML = '<button class="edit-button" type="button" onclick="editContact(event)">Edit</button>';
+		cell4.innerHTML = `<button class="edit-button" type="button" onclick="editContact(event, ${contact.id})">Edit</button>`;
 		cell5.innerHTML = `<button class="delete-button" type="button" onclick="deleteContact(event, ${contact.id});">Delete</button>`;
 		company.innerHTML = "Apple";
 	}
