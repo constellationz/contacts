@@ -70,7 +70,7 @@ function editfromDatabase()
     let tmp = {name:name, phone:phone, email:email, id:id};
 	let jsonPayload = JSON.stringify( tmp );
 
-    alert(jsonPayload);
+    // alert(jsonPayload);
 
 	let url = urlBase + '/EditContact.' + extension;
 
