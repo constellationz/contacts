@@ -1,45 +1,52 @@
 const fullscreenDiv = document.getElementById('fullscreen-div');
-const modal = document.getElementById('modal');
+const addModal = document.getElementById('modal-add');
 const addBtn = document.getElementById('add-btn');
 const closeBtn = document.getElementById('close-btn');
-const form = document.getElementById('modal');
+const closeEditBtn = document.getElementById('close-edit-btn'); 
+const addForm = document.getElementById('modal-add');
 const saveBtn = document.getElementById('save-btn');
+const editBtn = document.getElementById('edit-button');
+const editModal = document.getElementById('modal-edit');
+const editForm = document.getElementById('modal-edit');
+const saveEdit = document.getElementById('save-edit'); 
 
 function editContact(event) {
-    var row = event.target.parentNode.parentNode;
-    var name = row.querySelector("td:nth-child(1)").textContent;
-    var company = row.querySelector("td:nth-child(2)").textContent;
-    var phone = row.querySelector("td:nth-child(3)").textContent;
-    var email = row.querySelector("td:nth-child(4)").textContent;
-    //add the input fields to the row to allow inline editing
-    row.querySelector("td:nth-child(1)").innerHTML = "<input type='text' value='"+name+"'>";
-    row.querySelector("td:nth-child(2)").innerHTML = "<input type='text' value='"+company+"'>";
-    row.querySelector("td:nth-child(3)").innerHTML = "<input type='text' value='"+phone+"'>";
-    row.querySelector("td:nth-child(4)").innerHTML = "<input type='text' value='"+email+"'>";
-    //change the edit button to a save button
-    event.target.innerHTML = "Save";
-    event.target.removeEventListener("click", editContact);
-    event.target.addEventListener("click", saveContact);
+    editForm.reset();
+    UI.showEditModal();
+
+    // var row = event.target.parentNode.parentNode;
+    // var name = row.querySelector("td:nth-child(1)").textContent;
+    // var company = row.querySelector("td:nth-child(2)").textContent;
+    // var phone = row.querySelector("td:nth-child(3)").textContent;
+    // var email = row.querySelector("td:nth-child(4)").textContent;
+    // //add the input fields to the row to allow inline editing
+    // row.querySelector("td:nth-child(1)").innerHTML = "<input type='text' value='"+name+"'>";
+    // row.querySelector("td:nth-child(2)").innerHTML = "<input type='text' value='"+company+"'>";
+    // row.querySelector("td:nth-child(3)").innerHTML = "<input type='text' value='"+phone+"'>";
+    // row.querySelector("td:nth-child(4)").innerHTML = "<input type='text' value='"+email+"'>";
+    // //change the edit button to a save button
+    // event.target.innerHTML = "Save";
+    // event.target.removeEventListener("click", editContact);
+    // event.target.addEventListener("click", saveContact);
 }
 
 function saveContact(event) {
-    var row = event.target.parentNode.parentNode;
-    var name = row.querySelector("td:nth-child(1) input").value;
-    var company = row.querySelector("td:nth-child(2) input").value;
-    var phone = row.querySelector("td:nth-child(3) input").value;
-    var email = row.querySelector("td:nth-child(4) input").value;
-    //update the table with the new data
-    row.querySelector("td:nth-child(1)").innerHTML = name;
-    row.querySelector("td:nth-child(2)").innerHTML = company;
-    row.querySelector("td:nth-child(3)").innerHTML = phone;
-    row.querySelector("td:nth-child(4)").innerHTML = email;
-    //change the save button back to an edit button
-    event.target.innerHTML = "Edit";
-    event.target.removeEventListener("click", saveContact);
-    event.target.addEventListener("click", editContact);
+    UI.closeEditModal();
+    // var row = event.target.parentNode.parentNode;
+    // var name = row.querySelector("td:nth-child(1) input").value;
+    // var company = row.querySelector("td:nth-child(2) input").value;
+    // var phone = row.querySelector("td:nth-child(3) input").value;
+    // var email = row.querySelector("td:nth-child(4) input").value;
+    // //update the table with the new data
+    // row.querySelector("td:nth-child(1)").innerHTML = name;
+    // row.querySelector("td:nth-child(2)").innerHTML = company;
+    // row.querySelector("td:nth-child(3)").innerHTML = phone;
+    // row.querySelector("td:nth-child(4)").innerHTML = email;
+    // //change the save button back to an edit button
+    // event.target.innerHTML = "Edit";
+    // event.target.removeEventListener("click", saveContact);
+    // event.target.addEventListener("click", editContact);
 }
-
-
 
 function deleteContact(event, id) {
     if (confirm("Are you sure you want to delete this contact?")) {
@@ -101,13 +108,22 @@ function newContact(){
 
 // UI class
 class UI{
-    static showModal(){
-        modal.style.display = "block";
+    static showAddModal(){
+        addModal.style.display = "block";
         fullscreenDiv.style.display = "block";
     }
 
-    static closeModal(){
-        modal.style.display = "none";
+    static closeAddModal(){
+        addModal.style.display = "none";
+        fullscreenDiv.style.display = "none";
+    }
+    static showEditModal(){
+        editModal.style.display = "block";
+        fullscreenDiv.style.display = "block";
+    }
+
+    static closeEditModal(){
+        editModal.style.display = "none";
         fullscreenDiv.style.display = "none";
     }
 }
@@ -121,16 +137,21 @@ window.addEventListener('DOMContentLoaded', () => {
 function eventListeners(){
     // show add item modal
     addBtn.addEventListener('click', () => {
-        form.reset();
-        document.getElementById('modal-title').innerHTML = "Add Content";
-        UI.showModal();
+        addForm.reset();
+        document.getElementById('modal-title').innerHTML = "Add Contact";
+        UI.showAddModal();
     });
 
     // close add item modal
-    closeBtn.addEventListener('click', UI.closeModal);
+    closeBtn.addEventListener('click', UI.closeAddModal);
+
+    // close edit item modal
+    closeEditBtn.addEventListener('click', UI.closeEditModal);
 
 	saveBtn.addEventListener('click', () => {
         location.reload();
         UI.closeModal();
     });
+
+    saveEdit.addEventListener('click', saveContact); 
 }
