@@ -196,11 +196,6 @@ function eventListeners(){
 
 	saveBtn.addEventListener('click', () => {
         location.reload();
-        UI.closeAddModal();
+        UI.closeModal();
     });
-
-    saveEdit.addEventListener('click', () => {
-        location.reload();
-        UI.closeEditModal();
-    }); 
 }
