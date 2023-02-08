@@ -1,7 +1,36 @@
-@startuml
-header Contact Manager
-footer Authors:
-title Entity Relationship Diagram
-'classes, entities and their relationships go here, not really much I can add yet
-class Contact
+@startuml ERD
+entity "User" as user {
+  + A single user of the website.
+  ==
+  + ID : integer <<generated>>
+  ..
+  + DateCreated : timestamp
+  ..
+  + DateLastLoggedIn : timestamp
+  ..
+  + FirstName : string
+  ..
+  + LastName : string
+  ..
+  + Login : string
+  ..
+  + Password : string
+}
+entity "Contact" as contact {
+  + A single contact.
+  ==
+  + ID : integer <<generated>>
+  ..
+  + Name : string
+  ..
+  + Phone : string
+  ..
+  + Email : string
+  ..
+  + UserId : integer
+}
+note "There are many contacts per user but there is only one user per contact" as n1
+n1 .. user
+n1 .. contact
+user ||.right.o{ contact
 @enduml

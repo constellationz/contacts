@@ -1,17 +1,34 @@
 @startgantt
-header Contact Manager
-footer Authors:
-title Gantt Chart
-Project starts 2022-01-12
-[Design] starts 2022-01-12
-[Design] ends 2022-01-19
-[Implement Design] starts 2022-01-19
-[Implement Design] ends 2022-02-02
-[Test and Finalize] starts 2022-02-02
-[Test and Finalize] ends 2022-02-19
-
---Work Load--
-[Task a (John Doe)] lasts 4 days
-[Task b (Name)] starts 2022-01-20 and lasts 2 days
-[Task c (Name)] starts 2022-01-29 and lasts 1 week and 1 day
+Project starts 2023-01-19
+[Timeline] starts 2023-01-19
+[Timeline] ends 2023-02-14
+[Gather Requirements] starts 2023-01-19
+[Gather Requirements] ends 2023-01-20
+[Greate Gantt Chart] starts 2023-01-19
+[Greate Gantt Chart] ends 2023-01-20
+[Buy Domain] starts 2023-01-19
+[Buy Domain] ends 2023-01-20
+[Create & Test API Endpoints] starts at [Gather Requirements]'s end
+[Create & Test API Endpoints] ends 2023-01-25
+[Design webpages] starts at [Gather Requirements]'s end
+[Design webpages] ends 2023-01-25
+[API and Front-end works together] starts at [Create & Test API Endpoints]'s end
+[API and Front-end works together] ends 2023-01-27
+[Login and register WORKS] starts 2023-01-24
+[Login and register WORKS] ends 2023-01-29
+[Page loading & Pattern match search works] starts at [Login and register WORKS]'s end
+[Page loading & Pattern match search works] ends 2023-01-31
+[Complete required features] starts 2023-01-30
+[Complete required features] ends 2023-02-03
+[Bugfixing/Extra time] starts 2023-02-03
+[Bugfixing/Extra time] ends 2023-02-08
+[Code freeze] happens at 2023-02-09
+[Slide Deck] starts 2023-02-03
+[Slide Deck] ends 2023-02-08
+[Presentation rehearsals] starts at [Slide Deck]'s end
+[Presentation rehearsals] ends 2023-02-13
+note bottom
+    no coding at this point!
+end note
+[Final presentation] happens at 2023-02-14
 @endgantt

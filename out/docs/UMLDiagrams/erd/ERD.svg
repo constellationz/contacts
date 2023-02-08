@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="325px" preserveAspectRatio="none" style="width:488px;height:325px;background:#FFFFFF;" version="1.1" viewBox="0 0 488 325" width="488px" zoomAndPan="magnify"><defs/><g><!--MD5=[e59cf999063292dce8d6ea34dd10a338]
+class user--><g id="elem_user"><rect codeLine="1" fill="#F1F1F1" height="227.9063" id="user" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="232" x="7" y="91"/><ellipse cx="103.25" cy="107" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M106.8643,113.5 L99.1445,113.5 L99.1445,101.1069 L106.8643,101.1069 L106.8643,103.2651 L101.5933,103.2651 L101.5933,105.938 L106.3662,105.938 L106.3662,108.0962 L101.5933,108.0962 L101.5933,111.3418 L106.8643,111.3418 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="123.75" y="112.291">User</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="238" y1="123" y2="123"/><ellipse cx="18" cy="136.7441" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="193" x="27" y="140.5352">A single user of the website.</text><line style="stroke:#181818;stroke-width:1.0;" x1="8" x2="238" y1="147.4883" y2="147.4883"/><line style="stroke:#181818;stroke-width:1.0;" x1="8" x2="238" y1="149.4883" y2="149.4883"/><ellipse cx="18" cy="161.2324" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="27" y="165.0234">ID : integer «generated»</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="238" y1="171.9766" y2="171.9766"/><ellipse cx="18" cy="185.7207" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="27" y="189.5117">DateCreated : timestamp</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="238" y1="196.4648" y2="196.4648"/><ellipse cx="18" cy="210.209" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="206" x="27" y="214">DateLastLoggedIn : timestamp</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="238" y1="220.9531" y2="220.9531"/><ellipse cx="18" cy="234.6973" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="27" y="238.4883">FirstName : string</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="238" y1="245.4414" y2="245.4414"/><ellipse cx="18" cy="259.1855" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="27" y="262.9766">LastName : string</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="238" y1="269.9297" y2="269.9297"/><ellipse cx="18" cy="283.6738" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="27" y="287.4648">Login : string</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="238" y1="294.418" y2="294.418"/><ellipse cx="18" cy="308.1621" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="27" y="311.9531">Password : string</text></g><!--MD5=[2273177dd1e2e2e0f4fbe9ecde1d11fc]
+class contact--><g id="elem_contact"><rect codeLine="18" fill="#F1F1F1" height="178.9297" id="contact" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="189" x="274.5" y="115.5"/><ellipse cx="338.25" cy="131.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M341.8643,138 L334.1445,138 L334.1445,125.6069 L341.8643,125.6069 L341.8643,127.7651 L336.5933,127.7651 L336.5933,130.438 L341.3662,130.438 L341.3662,132.5962 L336.5933,132.5962 L336.5933,135.8418 L341.8643,135.8418 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="358.75" y="136.791">Contact</text><line style="stroke:#181818;stroke-width:0.5;" x1="275.5" x2="462.5" y1="147.5" y2="147.5"/><ellipse cx="285.5" cy="161.2441" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="294.5" y="165.0352">A single contact.</text><line style="stroke:#181818;stroke-width:1.0;" x1="275.5" x2="462.5" y1="171.9883" y2="171.9883"/><line style="stroke:#181818;stroke-width:1.0;" x1="275.5" x2="462.5" y1="173.9883" y2="173.9883"/><ellipse cx="285.5" cy="185.7324" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="294.5" y="189.5234">ID : integer «generated»</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="275.5" x2="462.5" y1="196.4766" y2="196.4766"/><ellipse cx="285.5" cy="210.2207" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="294.5" y="214.0117">Name : string</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="275.5" x2="462.5" y1="220.9648" y2="220.9648"/><ellipse cx="285.5" cy="234.709" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="294.5" y="238.5">Phone : string</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="275.5" x2="462.5" y1="245.4531" y2="245.4531"/><ellipse cx="285.5" cy="259.1973" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="294.5" y="262.9883">Email : string</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="275.5" x2="462.5" y1="269.9414" y2="269.9414"/><ellipse cx="285.5" cy="283.6855" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="294.5" y="287.4766">UserId : integer</text></g><g id="elem_n1"><path d="M11,6 L11,31.3105 L481,31.3105 L481,16 L471,6 L11,6 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M471,6 L471,16 L481,16 L471,6 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="449" x="17" y="23.5684">There are many contacts per user but there is only one user per contact</text></g><!--MD5=[3465afa4b586faeb86de713a2c47928c]
+link n1 to user--><g id="link_n1_user"><path codeLine="32" d="M238.12,31.32 C229.48,44.29 214.67,66.5 198.5,90.75 " fill="none" id="n1-user" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[595ca5d9b0a1873a491a64cafdb751ea]
+link n1 to contact--><g id="link_n1_contact"><path codeLine="33" d="M253.88,31.32 C265.39,48.58 287.82,82.23 309.85,115.27 " fill="none" id="n1-contact" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[1936fb4df61f4b472d188928ec228d7c]
+link user to contact--><g id="link_user_contact"><path codeLine="34" d="M248.56,205 C254.04,205 259.53,205 265.01,205 " fill="none" id="user-contact" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="264.73" x2="272.73" y1="205" y2="199"/><line style="stroke:#181818;stroke-width:1.0;" x1="264.73" x2="272.73" y1="205" y2="211"/><line style="stroke:#181818;stroke-width:1.0;" x1="264.73" x2="272.73" y1="205" y2="205"/><ellipse cx="258.73" cy="205" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="244.79" x2="244.79" y1="209" y2="201"/><line style="stroke:#181818;stroke-width:1.0;" x1="247.79" x2="247.79" y1="209" y2="201"/><line style="stroke:#181818;stroke-width:1.0;" x1="248.79" x2="240.79" y1="205" y2="205"/></g><!--MD5=[b879934fdab24cc8c5b3af3413f3ba0e]
+@startuml ERD
+entity "User" as user {
+  + A single user of the website.
+  ==
+  + ID : integer <<generated>>
+  ..
+  + DateCreated : timestamp
+  ..
+  + DateLastLoggedIn : timestamp
+  ..
+  + FirstName : string
+  ..
+  + LastName : string
+  ..
+  + Login : string
+  ..
+  + Password : string
+}
+entity "Contact" as contact {
+  + A single contact.
+  ==
+  + ID : integer <<generated>>
+  ..
+  + Name : string
+  ..
+  + Phone : string
+  ..
+  + Email : string
+  ..
+  + UserId : integer
+}
+note "There are many contacts per user but there is only one user per contact" as n1
+n1 .. user
+n1 .. contact
+user ||.right.o{ contact
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 13:01:30 EDT 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
