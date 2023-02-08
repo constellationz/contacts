@@ -48,20 +48,20 @@ Christian Lopez [@CLMMS](https://github.com/CLMMS) HTML/JavaScript
 
 Khalil Oxborough [@koxborough](https://github.com/koxborough) JavaScript & API
 
-Sophia Deangelo[@SopaKitchen](https://github.com/SopaKitchen) API and database
+Sophia Deangelo [@SopaKitchen](https://github.com/SopaKitchen) API and database
 
 ---
 
 # What went well?
 
-The good, the bad, and the ugly
+The good, the bad, and the ugly.
  
 ---
  
 ### Technologies Used
 
 ![height:30px](../logos/linode.svg) Linode (Hosting)
-![height:30px](../logos/marp.png) Marp (Presentation)
+![height:30px](../logos/marp.png) Marp (Slide deck)
 ![height:30px](../logos/plantuml.png) PlantUML (UML diagrams)
 ![height:30px](../logos/postman.png) Postman (API iteration)
 ![height:30px](../logos/github.svg) GitHub 🤝 ![height:30px](../logos/git.png) Git
