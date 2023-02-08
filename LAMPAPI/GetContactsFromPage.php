@@ -4,6 +4,8 @@
 	
 	$searchResults = "";
 	$searchCount = 0;
+	$amountOnPage = $inData["amount"];
+	$pageOffset = $inData["page"]*$amountOnPage;
 
 	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331");
 	if ($conn->connect_error) 
@@ -12,9 +14,8 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("select ID, Name, Phone, Email from Contacts where (Name like ? OR Phone like ? OR Email like ?)and UserID=?");
-		$contactName = "%" . $inData["search"] . "%";
-		$stmt->bind_param("sssi", $contactName, $contactName, $contactName, $inData["userId"]);
+		$stmt = $conn->prepare("select ID, Name, Phone, Email from Contacts where UserID=? limit ? offset ?");
+		$stmt->bind_param("iii", $inData["userId"], $amountOnPage, $pageOffset);
 		$stmt->execute();
 		
 		$result = $stmt->get_result();
@@ -31,7 +32,7 @@
 		
 		if( $searchCount == 0 )
 		{
-			returnWithError( "No Records Found" );
+			returnWithError( "User Has No Records" );
 		}
 		else
 		{

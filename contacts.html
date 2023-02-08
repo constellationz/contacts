@@ -1,48 +1,112 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>Contacts</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="editdelete.js"></script>
-  </head>
-  <body>
-    <header>
-        <div><h1>Contact Manager</h1></div>
-        <div><button class="logout-button" type="button" onclick="">←</button></div>
-    </header>
-    <nav>
-        <div class="nav-left">
-            <input id="searchcontact" type="search" placeholder="Find contact" style="margin:10px">
-            <button class=reset-button type="button" onclick="newContact()">❌</button>
-            <button class=search-button type="button" onclick="newContact()">🔍</button>
-        </div>
-        <div class="nav-right">
-            <button type="button" onclick="newContact()">New Contact</button>
-        </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- moved src to edit-delete inside the body as it wouldnt work the way we had it formatted-->
+    <script type="text/javascript" src="js/code.js"></script>
+    <!-- talk to khalil about putting this in the edit delete file as I have a function very similar to this-->
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() 
+      {
+        readCookie();
+      }, false);
+      </script>
 
+</head>
+<body onload = "loadContacts();">
+    <header>
+      <h1>Contact Manager</h1>
+    </header>
+      <div class="nav-left">
+        <input id="searchbar" type="search" placeholder="Find contact" style="margin:10px">
+        <button class=search-button type="button" onclick="searchContacts();">
+          <span><i class="fa fa-search" aria-hidden="true"></i> Search</span>
+        </button>
+        <button class=reset-button type="button" onclick="resetSearch();" id="resetSearch" hidden>
+          <span><i class="fa fa-trash" aria-hidden="true"></i> Reset Search</span>
+        </button>
+      </div>
+      <div class="nav-right">
+        <button type = "button" class = "btn" id = "add-btn">
+          <span><i class = "fas fa-plus"></i> Add Contact</span>
+        </button>
+        <button type = "button" class = "btn" onclick="doLogout();">
+          <span><i class = "fas fa-plus"></i> Logout</span>
+        </button>
+      </div>
     </nav>
     <main>
-      <table class="contact-table">
-        <caption>Your Contacts</caption>
-        <tr>
-          <th>Name</th>
-          <th>Company</th>
-          <th>Phone</th>
-          <th>Email</th>
-        </tr>
-        <tr>
-          <td>joe mama</td>
-          <td>CIA</td>
-          <td>911</td>
-          <td>president@cia.com</td>
-          <td><button class="edit-button" type="button" onclick="editContact(event)">Edit</button></td>
-          <td><button class="delete-button" type="button" onclick="deleteContact(event)">Delete</button></td>
-        </tr>
-      </table>
-    </main>
-    <footer class="foot">
-        POOSD small project
-    </footer>
-  </body>
+        <table class="contact-table" id="table"></table>
+      </main>
+      <footer class="foot">
+          POOSD small project
+      </footer>
+    <!-- add form modal -->
+    <div id = "fullscreen-div"></div>
+    <form class = "modal" id = "modal-add" onsubmit="addContact();">
+        <div class = "modal-content">
+            <div class = "modal-head">
+                <h3 id = "modal-title">Add Contact</h3>
+                <button type="button" id = "close-btn">
+                    <i class = "fas fa-times"></i>
+                </button>
+            </div>
+            <div class = "modal-main">
+                  <div class = "modal-col">
+                      <label for="">Name</label>
+                      <input type = "text" placeholder="John Smith" class = "form-control" id = "enter-name" name = "newName">
+                  </div>
+                  <div class = "modal-col">
+                      <label for="">Phone Number</label>
+                      <input type = "text" placeholder="123-456-7890" class = "form-control" id = "enter-phone" name = "newPhone">
+                  </div>
+                  <div class = "modal-col">
+                      <label for="">Email</label>
+                      <input type = "email" placeholder="johnsmith@email.com" class = "form-control" id = "enter-email" name = "email">
+                  </div>
+                  <div class = "modal-col">
+                      <button type = "submit" id = "save-btn">
+                        <span><i class="fa fa-floppy-disk" aria-hidden="true"></i> Save</span>
+                      </button>
+                  </div>
+            </div>
+        </div>
+    </form>
+    <!-- end of add form modal -->
+   <!-- edit form modal -->
+   <div id = "fullscreen-div"></div>
+   <form class = "modal" id = "modal-edit" onsubmit="editfromDatabase();">
+    <div class = "modal-content">
+        <div class = "modal-head">
+            <h3 id = "modal-title">Edit Contact</h3>
+            <button type="button" id = "close-edit-btn">
+                <i class = "fas fa-times"></i>
+            </button>
+        </div>
+        <span id="rowId" hidden></span>
+        <div class = "modal-main">
+              <div class = "modal-col">
+                  <label for="">Name</label>
+                  <input type = "text" placeholder="" class = "form-control" id = "edit-name">
+              </div>
+              <div class = "modal-col">
+                  <label for="">Phone Number</label>
+                  <input type = "text" placeholder="" class = "form-control" id = "edit-phone">
+              </div>
+              <div class = "modal-col">
+                  <label for="">Email</label>
+                  <input type = "email" placeholder="" class = "form-control" id = "edit-email">
+              </div>
+              <div class = "modal-col">
+                  <button type = "submit" id = "save-edit">Save Edit</button>
+              </div>
+        </div>
+    </div>
+</form>
+<!-- end of edit form modal -->
+    <script src = "js/editdelete.js"></script>
+    </body>
 </html>
