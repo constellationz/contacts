@@ -216,11 +216,9 @@ function fillTable(json)
 	let headerCell1 = rowTemp.insertCell(0);
 	let headerCell2 = rowTemp.insertCell(1);
 	let headerCell3 = rowTemp.insertCell(2);
-	let headerCell4 = rowTemp.insertCell(3);
 	headerCell1.innerHTML = "Name";
-	headerCell2.innerHTML = "Company";
-	headerCell3.innerHTML = "Phone";
-	headerCell4.innerHTML = "Email";
+	headerCell2.innerHTML = "Phone";
+	headerCell3.innerHTML = "Email";
 	rowTemp.classList.add("top-row");
 
 	for (let contact of contacts)
@@ -228,17 +226,15 @@ function fillTable(json)
 		let numRows = table.rows.length;
 		let row = table.insertRow(numRows);
 		let cell1 = row.insertCell(0);
-		let company = row.insertCell(1);
-		let cell2 = row.insertCell(2);
-		let cell3 = row.insertCell(3);
-		let cell4 = row.insertCell(4);
-		let cell5 = row.insertCell(5);
+		let cell2 = row.insertCell(1);
+		let cell3 = row.insertCell(2);
+		let cell4 = row.insertCell(3);
+		let cell5 = row.insertCell(4);
 		cell1.innerHTML = contact.name;
 		cell2.innerHTML = contact.phone;
 		cell3.innerHTML = contact.email;
 		cell4.innerHTML = `<button class="edit-button" type="button" onclick="editContact(event, ${contact.id})">Edit</button>`;
 		cell5.innerHTML = `<button class="delete-button" type="button" onclick="deleteContact(event, ${contact.id});">Delete</button>`;
-		company.innerHTML = "Apple";
 	}
 }
 

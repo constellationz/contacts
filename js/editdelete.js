@@ -15,9 +15,8 @@ function editContact(event, id) {
 
     let row = event.target.parentNode.parentNode;
 	document.getElementById("edit-name").value = (row.querySelector("td:nth-child(1)").textContent);
-    document.getElementById("edit-phone").value = (row.querySelector("td:nth-child(3)").textContent);
-    document.getElementById("edit-email").value = (row.querySelector("td:nth-child(4)").textContent);
-    document.getElementById("edit-company").value = (row.querySelector("td:nth-child(2)").textContent);
+    document.getElementById("edit-phone").value = (row.querySelector("td:nth-child(2)").textContent);
+    document.getElementById("edit-email").value = (row.querySelector("td:nth-child(3)").textContent);
 
     document.getElementById("rowId").value = id;
 
@@ -131,21 +130,18 @@ function deleteFromDatabase(id)
 
 function newContact(){
     var name = document.getElementById("enter-name").value;
-    var company = document.getElementById("enter-company").value;
     var phone = document.getElementById("enter-phone").value;
     var email = document.getElementById("enter-email").value;
 
     var table = document.querySelector(".contact-table");
     var newRow = table.insertRow(-1);
     var nameCell = newRow.insertCell(0);
-    var companyCell = newRow.insertCell(1);
-    var phoneCell = newRow.insertCell(2);
-    var emailCell = newRow.insertCell(3);
-    var editCell = newRow.insertCell(4);
-    var deleteCell = newRow.insertCell(5);
+    var phoneCell = newRow.insertCell(1);
+    var emailCell = newRow.insertCell(2);
+    var editCell = newRow.insertCell(3);
+    var deleteCell = newRow.insertCell(4);
 
     nameCell.innerHTML = name;
-    companyCell.innerHTML = company;
     phoneCell.innerHTML = phone;
     emailCell.innerHTML = email;
     editCell.innerHTML = "<button class='edit-button' type='button' onclick='editContact(event)'>Edit</button>";
