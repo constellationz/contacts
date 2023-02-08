@@ -19,7 +19,7 @@ It's like a phonebook.
 
 ![width:700px](https://sciphile.org/sites/default/files/users/guy/media/PhoneBooks.jpg)
 
-There's no stronger bond than friendship
+There's no stronger bond than friendship.
 
 ---
 
@@ -79,7 +79,7 @@ The good, the bad, and the ugly
 
 [API Demonstration on SwaggerHub](https://app.swaggerhub.com/apis/SOPHIAD/Contacts/1.0.0)
 
-[TODO: Backup Video](https://www.youtube.com)
+[Backup Video](https://www.youtube.com)
 
 ---
 
