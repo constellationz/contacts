@@ -1,1 +1,44 @@
-@startumlheader Contact Managerfooter Authors:title Use Case Diagram'diagram directionleft to right direction'user appearanceskinparam actorStyle awesome'participantsactor "New User" as nuseractor "Existing User" as euserdatabase "Application Database" as data'use casesusecase "Sign Up" as UCausecase "Login" as UCbrectangle "Contact Manager" as contacts{    usecase "Add Contact" as UC1    usecase "Search" as UC2    usecase "Edit Contact" as UC3    usecase "Delete Contact" as UC4}'connections:User: --> nuser:User: --> eusernuser --> UCaeuser --> UCbUCa --> UC1UCa --> UC2UCa --> UC3UCa --> UC4UCb --> UC1UCb --> UC2UCb --> UC3UCb --> UC4contacts --> data@enduml
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor user
+actor existing_user
+actor new_user
+database database
+rectangle Website {
+  rectangle Frontend {
+      usecase "Sign Out"
+  }
+  rectangle Endpoints {
+    usecase "Register"
+    usecase "Sign In"
+    usecase "Add Contact"
+    usecase "Edit Contact"
+    usecase "Delete Contact"
+    usecase "Get Contacts"
+  }
+  rectangle Logic {
+    user <|-- existing_user
+    user <|-- new_user
+    new_user --> (Register)
+    existing_user --> (Sign In)
+    (Sign In) -- database
+    (Register) -- database
+    existing_user --> (Sign Out)
+    existing_user --> (Add Contact)
+    existing_user --> (Delete Contact)
+    existing_user --> (Edit Contact)
+    (Add Contact) .. (Validate input) : include
+    (Edit Contact) .. (Validate input) : include
+    (Delete Contact) -- database
+    (Validate input) -- database
+    existing_user --> (Get Contacts)
+    (Get Contacts) -- (Get Contacts by Page)
+    (Get Contacts) -- (Get Contacts from Pattern)
+    (Get Contacts) -- (Get All Contacts)
+    (Get Contacts by Page) -- database
+    (Get Contacts from Pattern) -- database
+    (Get All Contacts) -- database
+  }
+}
+@enduml

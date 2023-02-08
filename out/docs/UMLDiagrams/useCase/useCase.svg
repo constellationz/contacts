@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="600px" preserveAspectRatio="none" style="width:931px;height:600px;background:#FFFFFF;" version="1.1" viewBox="0 0 931 600" width="931px" zoomAndPan="magnify"><defs/><g><!--MD5=[678cf225ed631456e5129914e9e3fa09]
+cluster Website--><g id="cluster_Website"><rect fill="none" height="587" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="549" x="236" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57" x="482" y="22.5352">Website</text></g><!--MD5=[fca8240bc233c06068545f9c8883ae88]
+cluster Frontend--><g id="cluster_Frontend"><rect fill="none" height="81" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="139" x="279" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="64" x="316.5" y="65.5352">Frontend</text></g><!--MD5=[0c32f742e4393f99f23758f33c9f4ec5]
+cluster Endpoints--><g id="cluster_Endpoints"><rect fill="none" height="415" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="177" x="260" y="155"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="72" x="312.5" y="170.5352">Endpoints</text></g><!--MD5=[8237f0313b7e89f796726a268ea6fa70]
+cluster Logic--><g id="cluster_Logic"><rect fill="none" height="313" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="244" x="517" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="38" x="620" y="68.5352">Logic</text></g><g id="elem_Sign Out"><ellipse cx="348.4819" cy="100.2234" fill="#F1F1F1" rx="53.4819" ry="14.7234" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="315.9819" y="104.241">Sign Out</text></g><g id="elem_Register"><ellipse cx="348.2674" cy="539.2036" fill="#F1F1F1" rx="51.2674" ry="14.7036" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="317.2893" y="543.2167">Register</text></g><g id="elem_Sign In"><ellipse cx="348.7313" cy="405.1623" fill="#F1F1F1" rx="44.7313" ry="14.6623" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="324.525" y="408.6507">Sign In</text></g><g id="elem_Add Contact"><ellipse cx="348.3912" cy="272.7782" fill="#F1F1F1" rx="66.8912" ry="15.7782" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="302.8912" y="276.7958">Add Contact</text></g><g id="elem_Edit Contact"><ellipse cx="348.683" cy="340.1366" fill="#F1F1F1" rx="66.183" ry="15.6366" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="304.183" y="344.1542">Edit Contact</text></g><g id="elem_Delete Contact"><ellipse cx="348.5403" cy="471.9081" fill="#F1F1F1" rx="72.5403" ry="16.9081" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="298.0432" y="475.3341">Delete Contact</text></g><g id="elem_Get Contacts"><ellipse cx="348.6072" cy="205.9214" fill="#F1F1F1" rx="67.6072" ry="15.9214" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="302.1072" y="209.939">Get Contacts</text></g><g id="elem_Validate input"><ellipse cx="639.0818" cy="333.0164" fill="#F1F1F1" rx="70.5818" ry="16.5164" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="590.0984" y="336.6924">Validate input</text></g><g id="elem_Get Contacts by Page"><ellipse cx="639.2221" cy="191.1444" fill="#F1F1F1" rx="91.2221" ry="20.6444" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="567.2221" y="194.4354">Get Contacts by Page</text></g><g id="elem_Get Contacts from Pattern"><ellipse cx="639.099" cy="112.1198" fill="#F1F1F1" rx="106.099" ry="23.6198" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="177" x="550.599" y="115.4108">Get Contacts from Pattern</text></g><g id="elem_Get All Contacts"><ellipse cx="639.2079" cy="264.1416" fill="#F1F1F1" rx="76.2079" ry="17.6416" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="584.7079" y="267.4326">Get All Contacts</text></g><!--MD5=[8fc3522a43f8c7199df5e09e5bb0188e]
+entity user--><g id="elem_user"><ellipse cx="21" cy="403.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M21,411.5 L21,438.5 M8,419.5 L34,419.5 M21,438.5 L8,453.5 M21,438.5 L34,453.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="6" y="468.5352">user</text></g><!--MD5=[9e0ead49c4997c6d6fa7bfb55c4e4ad5]
+entity existing_user--><g id="elem_existing_user"><ellipse cx="143" cy="310.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M143,318.5 L143,345.5 M130,326.5 L156,326.5 M143,345.5 L130,360.5 M143,345.5 L156,360.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="97" y="375.5352">existing_user</text></g><!--MD5=[3a36ea1c79532badc0b5e87f32e06ed5]
+entity new_user--><g id="elem_new_user"><ellipse cx="143" cy="458.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M143,466.5 L143,493.5 M130,474.5 L156,474.5 M143,493.5 L130,508.5 M143,493.5 L156,508.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="110.5" y="523.5352">new_user</text></g><!--MD5=[f50ff5e4cd64f259303fc83dba1819fc]
+entity database--><g id="elem_database"><path d="M832,320.5 C832,310.5 873,310.5 873,310.5 C873,310.5 914,310.5 914,320.5 L914,345.9883 C914,355.9883 873,355.9883 873,355.9883 C873,355.9883 832,355.9883 832,345.9883 L832,320.5 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M832,320.5 C832,330.5 873,330.5 873,330.5 C873,330.5 914,330.5 914,320.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="842" y="348.0352">database</text></g><!--MD5=[8af01bde4979ed74b69bf3c9cd47eb38]
+reverse link user to existing_user--><g id="link_user_existing_user"><path d="M52.94,409.02 C66.2,398.74 81.96,386.53 96.51,375.25 " fill="none" id="user-backto-existing_user" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="57.53,414.32,37.43,421.04,48.95,403.25,57.53,414.32" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[69393f773fd9e80f154640d859f050d9]
+reverse link user to new_user--><g id="link_user_new_user"><path d="M55.73,448.46 C72.82,456.29 93.44,465.74 110.24,473.44 " fill="none" id="user-backto-new_user" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="52.88,454.85,37.61,440.16,58.71,442.13,52.88,454.85" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[495df587a2ac4c4d08e63742318e8f12]
+link new_user to Register--><g id="link_new_user_Register"><path d="M175.8,495.97 C209.96,504.53 264.53,518.21 302.96,527.84 " fill="none" id="new_user-to-Register" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="307.52,528.98,299.7631,522.9112,302.6701,527.764,297.8174,530.671,307.52,528.98" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5758d53a792608356c49dadb0a80b826]
+link existing_user to Sign In--><g id="link_existing_user_Sign In"><path d="M189.43,358.93 C201.84,363.8 215.35,368.84 228,373 C253.47,381.38 282.52,389.2 305.6,395.01 " fill="none" id="existing_user-to-Sign In" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="310.16,396.15,302.3989,390.0866,305.3093,394.9373,300.4586,397.8477,310.16,396.15" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2cefd19ffd516e2e564b43a38cfbebdc]
+link Sign In to database--><g id="link_Sign In_database"><path d="M393.35,405.57 C473.8,405.64 649.85,401.29 793,366 C805.99,362.8 819.61,357.77 831.81,352.59 " fill="none" id="Sign In-database" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4383ee1adc49f48e4925d6c90b847404]
+link Register to database--><g id="link_Register_database"><path d="M394.49,545.99 C480.32,556.81 669.87,568.29 793,483 C836.91,452.58 858.27,389.9 866.98,355.99 " fill="none" id="Register-database" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[45e056fbda9ca4b6f0dd0e29edfae0a6]
+link existing_user to Sign Out--><g id="link_existing_user_Sign Out"><path d="M156.46,301.83 C169.74,265.68 193.61,211.48 228,174 C251.85,148.01 286.87,127.77 312.84,115.08 " fill="none" id="existing_user-to-Sign Out" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="317.21,112.99,307.3649,113.2613,312.6986,115.1458,310.8141,120.4795,317.21,112.99" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[fa8c5f34bf7a3cb3538d0da09c2a26ae]
+link existing_user to Add Contact--><g id="link_existing_user_Add Contact"><path d="M189.48,321.2 C201.88,316.33 215.38,311.26 228,307 C249.95,299.59 274.51,292.41 295.64,286.57 " fill="none" id="existing_user-to-Add Contact" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="300.32,285.29,290.5813,283.8209,295.4992,286.6164,292.7036,291.5343,300.32,285.29" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0d9ee2ddb80b680b3901eab0e9f7977a]
+link existing_user to Delete Contact--><g id="link_existing_user_Delete Contact"><path d="M169.07,378.38 C184,398.47 204.57,421.95 228,437 C244.42,447.55 264.13,455.01 282.75,460.25 " fill="none" id="existing_user-to-Delete Contact" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="287.56,461.55,279.9094,455.3478,282.7319,460.2501,277.8296,463.0727,287.56,461.55" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3a5b7062030d5238440343e6dbe469a4]
+link existing_user to Edit Contact--><g id="link_existing_user_Edit Contact"><path d="M189.42,340 C214.79,340 246.99,340 275.7,340 " fill="none" id="existing_user-to-Edit Contact" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="280.63,340,271.63,336,275.63,340,271.63,344,280.63,340" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7f78f43bbab66925c56e5875224af23f]
+link Add Contact to Validate input--><g id="link_Add Contact_Validate input"><path d="M400.08,283.52 C451.96,294.31 532.3,311.02 585.03,321.98 " fill="none" id="Add Contact-Validate input" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="454" y="292.5684">include</text></g><!--MD5=[0626abfd65cfc4cd116233f483ef54c5]
+link Edit Contact to Validate input--><g id="link_Edit Contact_Validate input"><path d="M414.76,339.47 C441.49,339.17 472.73,338.7 501,338 C523.13,337.45 547.26,336.64 569.02,335.83 " fill="none" id="Edit Contact-Validate input" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="454" y="334.5684">include</text></g><!--MD5=[73bcd361d4c2aa880e7ab4b1b38f07cc]
+link Delete Contact to database--><g id="link_Delete Contact_database"><path d="M419.52,475.63 C510.4,477.48 671.69,470.78 793,411 C818.76,398.31 841.3,373.97 855.63,355.84 " fill="none" id="Delete Contact-database" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[37de1858c9deb30471daf150aeff439c]
+link Validate input to database--><g id="link_Validate input_database"><path d="M709.92,333 C749.68,333 798.06,333 831.56,333 " fill="none" id="Validate input-database" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[59d0a5749b5c488589d031ca32c78b11]
+link existing_user to Get Contacts--><g id="link_existing_user_Get Contacts"><path d="M167.26,301.87 C182.15,280.48 203.28,254.96 228,239 C244.8,228.16 265.14,220.84 284.24,215.91 " fill="none" id="existing_user-to-Get Contacts" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="288.65,214.82,278.9533,213.0954,283.7959,216.0192,280.8721,220.8619,288.65,214.82" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[329931fbf5b3271d475749db03c5ff29]
+link Get Contacts to Get Contacts by Page--><g id="link_Get Contacts_Get Contacts by Page"><path d="M414.97,202.6 C454.86,200.52 506.37,197.84 549.82,195.58 " fill="none" id="Get Contacts-Get Contacts by Page" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f2933b2f8f4d1343a6730a44e59f9c3a]
+link Get Contacts to Get Contacts from Pattern--><g id="link_Get Contacts_Get Contacts from Pattern"><path d="M388.78,192.79 C421.04,181.98 467.93,166.35 509,153 C531.01,145.84 555.18,138.13 576.59,131.34 " fill="none" id="Get Contacts-Get Contacts from Pattern" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8838ce1372f7d4b621cc24a0de197723]
+link Get Contacts to Get All Contacts--><g id="link_Get Contacts_Get All Contacts"><path d="M401.08,216.37 C451.48,226.5 528.07,241.9 580.43,252.43 " fill="none" id="Get Contacts-Get All Contacts" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3b02a8dc679a304ba5a93db51e3a0f60]
+link Get Contacts by Page to database--><g id="link_Get Contacts by Page_database"><path d="M720.45,200.39 C745.18,205.97 771.51,214.85 793,229 C824.06,249.45 847.74,286.38 860.76,310.28 " fill="none" id="Get Contacts by Page-database" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[21c32588f77cfe13dab59b58f538af0a]
+link Get Contacts from Pattern to database--><g id="link_Get Contacts from Pattern_database"><path d="M733.45,123.05 C754.84,129.17 776.21,138.58 793,153 C841.55,194.69 861.36,271.87 868.49,310.19 " fill="none" id="Get Contacts from Pattern-database" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f02b976c2a4aad8dd933805006e07f48]
+link Get All Contacts to database--><g id="link_Get All Contacts_database"><path d="M699.53,275 C728.13,280.94 762.69,289.1 793,299 C805.77,303.17 819.33,308.61 831.54,313.91 " fill="none" id="Get All Contacts-database" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f1fd1c9180fc00581a7eb983cd1f5317]
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor user
+actor existing_user
+actor new_user
+database database
+rectangle Website {
+  rectangle Frontend {
+      usecase "Sign Out"
+  }
+  rectangle Endpoints {
+    usecase "Register"
+    usecase "Sign In"
+    usecase "Add Contact"
+    usecase "Edit Contact"
+    usecase "Delete Contact"
+    usecase "Get Contacts"
+  }
+  rectangle Logic {
+    user <|- - existing_user
+    user <|- - new_user
+    new_user - -> (Register)
+    existing_user - -> (Sign In)
+    (Sign In) - - database
+    (Register) - - database
+    existing_user - -> (Sign Out)
+    existing_user - -> (Add Contact)
+    existing_user - -> (Delete Contact)
+    existing_user - -> (Edit Contact)
+    (Add Contact) .. (Validate input) : include
+    (Edit Contact) .. (Validate input) : include
+    (Delete Contact) - - database
+    (Validate input) - - database
+    existing_user - -> (Get Contacts)
+    (Get Contacts) - - (Get Contacts by Page)
+    (Get Contacts) - - (Get Contacts from Pattern)
+    (Get Contacts) - - (Get All Contacts)
+    (Get Contacts by Page) - - database
+    (Get Contacts from Pattern) - - database
+    (Get All Contacts) - - database
+  }
+}
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 13:01:30 EDT 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
