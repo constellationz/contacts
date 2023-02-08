@@ -17,9 +17,24 @@ It's like a phonebook.
 
 <!-- backgroundColor: white -->
 
-![width:700px](https://sciphile.org/sites/default/files/users/guy/media/PhoneBooks.jpg)
+![width:1000px](https://sciphile.org/sites/default/files/users/guy/media/PhoneBooks.jpg)
 
-There's no stronger bond than friendship.
+![bg brightness:0.5](https://sciphile.org/sites/default/files/users/guy/media/PhoneBooks.jpg)
+
+---
+
+![width:1000px](https://www.incimages.com/uploaded_files/image/1920x1080/getty_522390562_274931.jpg)
+
+![bg brightness:0.52](https://www.incimages.com/uploaded_files/image/1920x1080/getty_522390562_274931.jpg)
+
+<!-- Scoped style -->
+<style scoped>
+{
+  color: white;
+}
+</style>
+
+**Friendship :-)**
 
 ---
 
