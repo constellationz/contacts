@@ -1,5 +1,5 @@
 :root { 
-	font-family: 'Inter', sans-serif; 
+  font-family: 'Inter', sans-serif; 
 }
 
 @supports (font-variation-settings: normal) {
@@ -23,6 +23,7 @@
   --focus-outline: 3px solid var(--focus-color);
   --header-bg: #878063;
   --header-fg: white;
+  --table-color: #d5d3d3;
 }
 
 body {
@@ -67,6 +68,15 @@ main {
   height: auto;
   margin-top: 50px;
   filter: var(--shadow);
+}
+
+.contactsmain {
+  width: 800px;
+}
+
+.nav-left {
+  display: flex;
+  height: 60px;
 }
 
 /* Login form styling */
@@ -122,7 +132,11 @@ input:focus {
 }
 
 #searchbar {
+  width: 60%
+}
 
+.search-button .reset-button {
+  width: 20%;
 }
 
 ::selection {
@@ -211,15 +225,14 @@ nav {
 
 /* Table styling */
 .contact-table {
-  width: 100%;
   font-size: 16px;
   border-collapse: collapse;
-  margin: 20px auto;
+  margin: 10px;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px dashed var(--table-color);
+  padding: 12px;
   text-align: left;
 }
 
@@ -229,18 +242,16 @@ th {
 }
 
 .top-row {
-  background-color: #87637c;
-  color: white;
+  font-weight: 600;
+  font-size: large;
 }
 
 /* Edit and delete button styling */
 .edit-button, .delete-button {
-  background-color: var(--header-bg);
-  color: var(--header-fg);
-  border: none;
   padding: 5px 10px;
+  margin: auto;
   font-size: 14px;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
 	font-family: 'Inter';
 }
@@ -260,14 +271,14 @@ th {
 
 .modal-head {
   background-color: var(--header-bg);
-	color: var(--header-fg);
+  color: var(--header-fg);
   padding: .8rem 1.2rem;
   font-size: 1.5rem;
   color: #fff;
   position: relative; 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Header text for the edit/add modal */

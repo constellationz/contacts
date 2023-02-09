@@ -15,14 +15,14 @@
       <img src="images/yellowbook.svg">
       <h1>The Yellow Book</h1>
     </header>
-    <main>
+    <main class="contactsmain">
       <div class="nav-left">
         <input id="searchbar" type="search" placeholder="Search by name, phone, or email">
-        <button class=search-button type="button" onclick="searchContacts();">
+        <button class="search-button" type="button" onclick="searchContacts();">
           <span><i class="fa fa-search" aria-hidden="true"></i> Search</span>
         </button>
-        <button class=reset-button type="button" onclick="resetSearch();" id="resetSearch" hidden>
-          <span><i class="fa fa-trash" aria-hidden="true"></i> Reset Search</span>
+        <button class="reset-button" type="button" onclick="resetSearch();" id="resetSearch" hidden>
+          <span><i class="fa fa-trash" aria-hidden="true"></i> Reset</span>
         </button>
       </div>
       <div class="nav-right">
@@ -30,7 +30,7 @@
           <span><i class="fas fa-plus"></i> Add Contact</span>
         </button>
         <button type="button" class="btn buttoncancel" onclick="doLogout();">
-          <span><i class="fas fa-plus"></i> Logout</span>
+          <span><i class="fas fa-door-open"></i> Log Out</span>
         </button>
       </div>
     <table class="contact-table" id="table"></table>
@@ -60,8 +60,8 @@
           <input type="email" placeholder="johnsmith@email.com" class="form-control" id="enter-email" name="email">
         </div>
         <div class="modal-col">
-          <button type="submit" id="save-btn">
-            <span><i class="fa fa-floppy-disk" aria-hidden="true"></i> Save</span>
+          <button type="submit" class="buttongreen" id="save-btn">
+            <span><i class="fa fa-floppy-disk" aria-hidden="true"></i> Add Contact</span>
           </button>
           <button type="button" class="buttoncancel" id="close-btn">
             <span><i class="fa fa-times" aria-hidden="true"></i> Nevermind</span>
@@ -76,6 +76,7 @@
     <form class="modal" id="modal-edit" onsubmit="editfromDatabase();">
       <div class="modal-content">
         <div class="modal-head">
+          <img src="images/yellowbook.svg">
           <h3 id="modal-title">Edit Contact</h3>
         </div>
         <span id="rowId" hidden></span>
@@ -93,7 +94,7 @@
             <input type="email" placeholder="" class="form-control" id="edit-email">
           </div>
           <div class="modal-col">
-            <button type="submit" id="save-edit">
+            <button type="submit" class="buttongreen" id="save-edit">
               <span><i class="fa fa-floppy-disk" aria-hidden="true"></i> Save Edit</span>
             </button>
             <button type="button" class="buttoncancel" id="close-edit-btn">
