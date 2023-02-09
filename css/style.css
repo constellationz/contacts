@@ -27,11 +27,12 @@
   --line-color: #b9a450;
 }
 
-.background {
-  width: 100%;
+html {
   height: 100%;
-  position: absolute;
+  margin: 0px;
   background-image: repeating-linear-gradient(var(--bg) 0px, var(--bg) 23px, var(--line-color) 25px);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body {
