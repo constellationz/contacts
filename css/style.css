@@ -35,6 +35,7 @@ body {
   display: inline-block;
   font-family: 'Inter';
   font-weight: 500;
+  background-image: repeating-linear-gradient(var(--bg) 0px, var(--bg) 23px, #00000055 25px);
 }
 
 /* Header styling */
@@ -47,7 +48,6 @@ header {
   align-items: center;
   justify-content: center;
   height: 50px;
-  filter: var(--shadow);
 }
 
 img {
