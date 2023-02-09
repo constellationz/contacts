@@ -17,27 +17,6 @@ It's like a phonebook.
 
 <!-- backgroundColor: white -->
 
-![width:1000px](https://sciphile.org/sites/default/files/users/guy/media/PhoneBooks.jpg)
-
-![bg brightness:0.5](https://sciphile.org/sites/default/files/users/guy/media/PhoneBooks.jpg)
-
----
-
-![width:1000px](https://www.incimages.com/uploaded_files/image/1920x1080/getty_522390562_274931.jpg)
-
-![bg brightness:0.52](https://www.incimages.com/uploaded_files/image/1920x1080/getty_522390562_274931.jpg)
-
-<!-- Scoped style -->
-<style scoped>
-{
-  color: white;
-}
-</style>
-
-**Friendship :-)**
-
----
-
 # Team Members
 
 Tyler Angley [@constellationz](https://github.com/constellationz) Project Manager
@@ -53,13 +32,16 @@ Sophia Deangelo [@SopaKitchen](https://github.com/SopaKitchen) API and database
 ---
 
 # What went well?
-
-The good, the bad, and the ugly.
  
 ---
  
-### Technologies Used
 
+# What didn't go so well?
+ 
+---
+**Technologies Used**
+
+![height:30px](../logos/linux.svg) LAMP stack
 ![height:30px](../logos/linode.svg) Linode (Hosting)
 ![height:30px](../logos/marp.png) Marp (Slide deck)
 ![height:30px](../logos/plantuml.png) PlantUML (UML diagrams)
@@ -100,10 +82,11 @@ The good, the bad, and the ugly.
 
 # Live Demo!
 
-[Take me to The Yellow Book](http://theyellowbookcop4331.com)
+[Take me to The Yellow Book](http://test.theyellowbookcop4331.com)
 
 ---
 
-# Any questions?
 
-# ![align:center width:100px](https://raw.githubusercontent.com/constellationz/contacts/main/images/yellowbook.svg)
+![width:800px](https://sciphile.org/sites/default/files/users/guy/media/PhoneBooks.jpg)
+
+ **Any questions?**
