@@ -87,16 +87,13 @@ function doRegister()
 
 				if (error === "Error: User Already Exists")
 				{
-					let loginResult = document.getElementById("loginResult");
-					loginResult.innerHTML = "Username Already Exists";
-					loginResult.style.color = "red";
+					let registerResult = document.getElementById("registerResult");
+					registerResult.innerHTML = "Username Already Exists";
+					registerResult.style.color = "red";
 				}
 				else
 				{
 					window.location.href = "index.html";
-					let loginResult = document.getElementById("loginResult");
-					loginResult.innerHTML = "Login Success!";
-					loginResult.style.color = "green";
 				}
 			}
 		};

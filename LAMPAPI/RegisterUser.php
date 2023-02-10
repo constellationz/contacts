@@ -19,20 +19,22 @@
 
 		$result = $test->get_result();
 
-		while($row = $result->fetch_assoc())
+		if ($result->num_rows != 0)
 		{
 			$test->close();
 			$conn->close();
 			returnWithError("Error: User Already Exists");
 		}
-
-		$stmt = $conn->prepare("INSERT INTO Users (FirstName, LastName, Login, Password) VALUES (?, ?, ?, ?)");
-		$stmt->bind_param("ssss", $firstName, $lastName, $login, $password);
-		$stmt->execute();
-		$test->close();
-		$stmt->close();
-		$conn->close();
-		returnWithError("");
+		else
+		{
+			$stmt = $conn->prepare("INSERT INTO Users (FirstName, LastName, Login, Password) VALUES (?, ?, ?, ?)");
+			$stmt->bind_param("ssss", $firstName, $lastName, $login, $password);
+			$stmt->execute();
+			$test->close();
+			$stmt->close();
+			$conn->close();
+			returnWithError("");
+		}
 	}
 
 	function getRequestInfo()
