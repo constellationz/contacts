@@ -40,7 +40,7 @@ function editContact(event, id) {
 
 function saveContact(event) {
     editfromDatabase();
-    location.reload();
+    // location.reload();
     closeEditModal();
     
     // var row = event.target.parentNode.parentNode;
@@ -174,7 +174,7 @@ function eventListeners() {
     // close edit item modal
     closeEditBtn.addEventListener('click', closeEditModal);
     saveBtn.addEventListener('click', () => {
-        location.reload();
+        // location.reload();
         closeEditModal();
     });
 }
