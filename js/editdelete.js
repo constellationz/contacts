@@ -175,6 +175,6 @@ function eventListeners() {
     closeEditBtn.addEventListener('click', closeEditModal);
     saveBtn.addEventListener('click', () => {
         location.reload();
-        closeModal();
+        closeEditModal();
     });
 }
