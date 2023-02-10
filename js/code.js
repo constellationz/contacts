@@ -67,10 +67,33 @@ function doRegister()
 	let password = document.getElementById("registerPassword").value;
 //	var hash = md5( password );
 
+	let registerResult = document.getElementById("registerResult");
+	registerResult.style.color = "red";
+	if (firstName.length == 0)
+	{
+		registerResult.innerHTML = "First Name Cannot Be Blank";
+		return;
+	}
+	else if (lastName.length == 0)
+	{
+		registerResult.innerHTML = "Last Name Cannot Be Blank";
+		return;
+	}
+	else if (login.length == 0)
+	{
+		registerResult.innerHTML = "Username Cannot Be Blank";
+		return;
+	}
+	else if (password.length == 0)
+	{
+		registerResult.innerHTML = "Password Cannot Be Blank";
+		return;
+	}
+
 	let tmp = {firstName:firstName,lastName:lastName,login:login,password:password};
 //	var tmp = {login:login,password:hash};
 	let jsonPayload = JSON.stringify( tmp );
-	
+
 	let url = urlBase + '/RegisterUser.' + extension;
 
 	let xhr = new XMLHttpRequest();
@@ -87,9 +110,7 @@ function doRegister()
 
 				if (error === "Error: User Already Exists")
 				{
-					let registerResult = document.getElementById("registerResult");
 					registerResult.innerHTML = "Username Already Exists";
-					registerResult.style.color = "red";
 				}
 				else
 				{
