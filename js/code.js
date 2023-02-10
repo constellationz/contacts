@@ -38,6 +38,7 @@ function doLogin()
 				if( userId < 1 )
 				{		
 					document.getElementById("loginResult").innerHTML = "* Username or password incorrect";
+					document.getElementById("loginResult").style.color = "red";
 					return;
 				}
 		
@@ -81,7 +82,22 @@ function doRegister()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				window.location.href = "index.html";
+				let jsonObject = JSON.parse( xhr.responseText );
+				let error = jsonObject.error;
+
+				if (error === "Error: User Already Exists")
+				{
+					let loginResult = document.getElementById("loginResult");
+					loginResult.innerHTML = "Username Already Exists";
+					loginResult.style.color = "red";
+				}
+				else
+				{
+					window.location.href = "index.html";
+					let loginResult = document.getElementById("loginResult");
+					loginResult.innerHTML = "Login Success!";
+					loginResult.style.color = "green";
+				}
 			}
 		};
 		xhr.send(jsonPayload);
