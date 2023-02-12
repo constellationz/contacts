@@ -1,173 +1,310 @@
+:root { 
+  font-family: 'Inter', sans-serif; 
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+:root {
+  --bg: #fcf99a;
+  --fg: #000000;
+  --shadow: drop-shadow(0 5px 1rem #00000055);
+  --button: rgb(54, 120, 255);
+  --button-hover: rgb(34, 100, 235);
+  --button-click: rgb(4, 70, 205);
+  --button-cancel: rgb(214, 79, 79);
+  --button-cancel-hover: rgb(171, 63, 63);
+  --button-cancel-click: rgb(138, 50, 50);
+  --button-green: rgb(78, 173, 92);
+  --button-green-hover: rgb(58, 153, 72);
+  --button-green-click: rgb(38, 133, 52);
+  --focus-color: #1ba3f288;
+  --focus-outline: 3px solid var(--focus-color);
+  --header-bg: #878063;
+  --header-fg: white;
+  --table-color: #d5d3d3;
+  --line-color: #b9a450;
+}
+
+html {
+  height: 100%;
+  margin: 0px;
+  background-image: repeating-linear-gradient(var(--bg) 0px, var(--bg) 23px, var(--line-color) 25px);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 body {
-    font-family: monospace, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #636a87;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg);
+  background: transparent;
+  display: inline-block;
+  font-family: 'Inter';
+  font-weight: 500;
 }
 
 /* Header styling */
 header {
-    background-color: #878063;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--header-bg);
+  color: var(--header-fg);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
 }
 
 img {
-    width: 24px;
-    height: 24px;
-    margin: 0 10px;
+  width: 48px;
+  height: 48px;
+  margin: 0 10px;
 }
 
 /* Main section styling */
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: white;
+  padding: 20px;
+  margin: auto;
+  width: 600px;
+  height: auto;
+  margin-top: 50px;
+  filter: var(--shadow);
+}
+
+.contactsmain {
+  width: 800px;
+}
+
+.nav-left {
+  display: flex;
+  height: 60px;
 }
 
 /* Login form styling */
 form {
-    background-color: #878063;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  padding: 0px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter';
+}
+
+label {
+  margin: 0px 10px;
+}
+
+span {
+  margin: 0px 10px;
+}
+
+.fieldError {
+  color: red;
 }
 
 h2 {
-    margin: 0 0 20px 0;
-    text-align: center;
+  margin: 5px 5px;
+	text-align: center;
+}
+
+h3 {
+  margin: 5px 5px;
+	text-align: center;
 }
 
 input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 20px;
-    border: 1px solid #ccc;
+  padding: 12px 20px;
+	margin: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 2px solid #ddd;
+	font-size: medium;
+	font-family: 'Inter';
+	font-weight: 500;
+	caret-color: #555;
+}
+
+input:focus {
+	border: 2px solid #bbb;
+	outline: var(--focus-outline);
+}
+
+#searchbar {
+  width: 60%
+}
+
+.search-button .reset-button {
+  width: 20%;
+}
+
+::selection {
+	background-color: var(--focus-color);
+	color: #000;
 }
 
 /* Login button styling */
 button {
-    background-color: #87637c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    margin: 10px;
+	background: var(--button);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: medium;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+	font-family: 'Inter';
+	font-weight: 500;
+}
+
+button:focus {
+	outline: var(--focus-outline);
+	background: var(--button-hover);
+}
+
+button:hover {
+	background: var(--button-hover);
+}
+
+button:active {
+	background: var(--button-click);
+}
+
+/* Cancel button styling */
+.buttoncancel {
+	background: var(--button-cancel);
+}
+
+.buttoncancel:focus {
+	background: var(--button-cancel-hover);
+}
+
+.buttoncancel:hover {
+	background: var(--button-cancel-hover);
+}
+
+.buttoncancel:active{
+	background: var(--button-cancel-click);
+}
+
+/* Green button styling */
+.buttongreen {
+	background: var(--button-green);
+}
+
+.buttongreen:focus {
+	background: var(--button-green-hover);
+}
+
+.buttongreen:hover {
+	background: var(--button-green-hover);
+}
+
+.buttongreen:active{
+	background: var(--button-green-click);
 }
 
 /* Nav styling */
 nav {
-    background-color: #878063;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
+  background-color: var(--header-bg);
+	color: var(--header-fg);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
 #searchcontact {
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 20px;
-    width: 40%;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+	margin: auto;
+	width: 100%;
 }
 
 /* Table styling */
 .contact-table {
-    width: 100%;
-    font-size: 16px;
-    border-collapse: collapse;
-    margin: 20px auto;
+  font-size: 16px;
+  border-collapse: collapse;
+  margin: 10px;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+  border: 1px dashed var(--table-color);
+  padding: 12px;
+  text-align: left;
 }
 
 th {
-    background-color: #87637c;
-    color: white;
+  background-color: #87637c;
+  color: white;
 }
 
 .top-row {
-    background-color: #87637c;
-    color: white;
+  font-weight: 600;
+  font-size: large;
 }
 
 /* Edit and delete button styling */
 .edit-button, .delete-button {
-    background-color: #878063;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    font-size: 14px;
-    border-radius: 20px;
-    cursor: pointer;
+  padding: 5px 10px;
+  margin: auto;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+	font-family: 'Inter';
 }
 
-/*register user styles*/
-#modal-add, #modal-edit{
-    display: none; 
-    background-color: #636a87;
-    border-radius: 0.6rem;
-    overflow: hidden;
-    position: fixed;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%); 
-    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.2);
+/* Register user styles */
+#modal-add, #modal-edit {
+  display: none; 
+  background-color: white;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%); 
+	filter: var(--shadow);
 }
-.modal-head{
-    background-color: #878063;
-    padding: .8rem 1.2rem;
-    font-size: 1.5rem;
-    color: #fff;
-    position: relative; 
+
+.modal-head {
+  background-color: var(--header-bg);
+  color: var(--header-fg);
+  padding: .8rem 1.2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.modal-head h3{
-    color: #fff;
-    align-items: center;
+
+/* Header text for the edit/add modal */
+#modal-title {
+	color: var(--header-fg);
+  align-items: center;
 }
-#close-btn, #close-edit-btn{
-    background-color: transparent; 
-    font-size: 1.4rem;
-    position: absolute; 
-    right: 1rem;
-    top: 1.8rem; 
-    display: block;
-    align-items: center; 
-    justify-content: center;
-    background-color: transparent;
-    color: white;
-    height: 30px; 
-    width: 30px; 
-    border-radius: 50%;
-    transition: all 200ms ease; 
+
+.modal-main {
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+  max-width: 300px;
+  min-width: 300px; 
 }
-#close-btn:hover{
-    transform: scale(1.1);
-}
-#close-edit-btn:hover{
-    transform: scale(1.1);
-}
-.modal-main{
-    padding: 1.2rem 2.4rem 1rem 2.4rem;
-    max-width: 300px;
-    min-width: 300px; 
+
+.modal-col {
+	display: flex;
+	flex-direction: column;
 }

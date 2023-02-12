@@ -1,29 +1,30 @@
 <!doctype html>
 <html>
-<head>
+    <head>
     <meta charset="utf-8">
     <title>Login</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/code.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
   <header>
-    <h1>Contact Manager</h1>
-    <img src="images/userpic.png">
+    <img src="images/yellowbook.svg">
+    <h1>The Yellow Book</h1>
   </header>
   <main class="login-bubble">
-      <img src="images/rotaryphone.png">
-      <h2>Your contacts await you.</h2>
-      <input id="loginName" type="text" placeholder="Username" style="margin:10px" maxlength="50" autofocus>
-      <input id="loginPassword" type="password" placeholder="Password" style="margin:10px" maxlength="50" />
-      <a href="register.html">
-        <button class="login-button">Register</button>
-      </a>
-      <button class="login-button" onclick="doLogin();">Sign In</button>
-      <span id="loginResult"></span>
+    <h2>User Login</h2>
+    <label class="inputHeader">Username</label>
+    <input id="loginName" type="text" placeholder="Username" maxlength="50" autofocus>
+    <label class="inputHeader">Password</label>
+    <input type="password" id="loginPassword" typewindow.location.href='register.html-'="password" placeholder="Password" maxlength="50" />
+    <span class="fieldError" id="loginResult"></span>
+    <button class="login-button buttongreen" onclick="doLogin();">Sign In</button>
+    <button class="login-button" onclick="window.location.href='register.html'">Don't have an account? Register</button>
   </main>
   <footer class="foot">
-    POOSD small project
   </footer>
 </body>
 </html>

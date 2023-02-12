@@ -14,13 +14,13 @@ function editContact(event, id) {
     editForm.reset();
 
     let row = event.target.parentNode.parentNode;
-	document.getElementById("edit-name").value = (row.querySelector("td:nth-child(1)").textContent);
+    document.getElementById("edit-name").value = (row.querySelector("td:nth-child(1)").textContent);
     document.getElementById("edit-phone").value = (row.querySelector("td:nth-child(2)").textContent);
     document.getElementById("edit-email").value = (row.querySelector("td:nth-child(3)").textContent);
 
     document.getElementById("rowId").value = id;
 
-    UI.showEditModal();
+    showEditModal();
 
     // var row = event.target.parentNode.parentNode;
     // var name = row.querySelector("td:nth-child(1)").textContent;
@@ -40,8 +40,8 @@ function editContact(event, id) {
 
 function saveContact(event) {
     editfromDatabase();
-    location.reload();
-    UI.closeEditModal();
+    // location.reload();
+    closeEditModal();
     
     // var row = event.target.parentNode.parentNode;
     // var name = row.querySelector("td:nth-child(1) input").value;
@@ -59,38 +59,31 @@ function saveContact(event) {
     // event.target.addEventListener("click", editContact);
 }
 
-function editfromDatabase()
-{
+function editfromDatabase() {
     let id = parseInt(document.getElementById("rowId").value);
     let name = document.getElementById("edit-name").value;
     let phone = document.getElementById("edit-phone").value;
     let email = document.getElementById("edit-email").value;
 
     let tmp = {name:name, phone:phone, email:email, id:id};
-	let jsonPayload = JSON.stringify( tmp );
+    let jsonPayload = JSON.stringify( tmp );
 
     // alert(jsonPayload);
+    let url = urlBase + '/EditContact.' + extension;
 
-	let url = urlBase + '/EditContact.' + extension;
-
-	let xhr = new XMLHttpRequest();
-	xhr.open("POST", url, true);
-	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-	try
-	{
-		xhr.onreadystatechange = function() 
-		{
-			if (this.readyState == 4 && this.status == 200) 
-			{
-				// alert("The contact has been deleted");
-			}
-		};
-		xhr.send(jsonPayload);
-	}
-	catch(err)
-	{
-		windows.alert("Something went wrong...");
-	}
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    try {
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                  // alert("The contact has been deleted");
+            }
+        }
+        xhr.send(jsonPayload);
+    } catch(err) {
+      windows.alert("Something went wrong...");
+    }
 }
 
 function deleteContact(event, id) {
@@ -104,31 +97,24 @@ function deleteContact(event, id) {
 function deleteFromDatabase(id)
 {
     let tmp = {id:id};
-	let jsonPayload = JSON.stringify( tmp );
-	
-	let url = urlBase + '/DeleteContact.' + extension;
-
-	let xhr = new XMLHttpRequest();
-	xhr.open("POST", url, true);
-	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-	try
-	{
-		xhr.onreadystatechange = function() 
-		{
-			if (this.readyState == 4 && this.status == 200) 
-			{
-				// alert("The contact has been deleted");
-			}
-		};
-		xhr.send(jsonPayload);
-	}
-	catch(err)
-	{
-		windows.alert("Something went wrong...");
-	}
+    let jsonPayload = JSON.stringify( tmp );
+    let url = urlBase + '/DeleteContact.' + extension;
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    try {
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            // alert("The contact has been deleted");
+            }
+        };
+        xhr.send(jsonPayload);
+    } catch(err) {
+        windows.alert("Something went wrong...");
+    }
 }
 
-function newContact(){
+function newContact() {
     var name = document.getElementById("enter-name").value;
     var phone = document.getElementById("enter-phone").value;
     var email = document.getElementById("enter-email").value;
@@ -148,26 +134,24 @@ function newContact(){
     deleteCell.innerHTML = "<button class='delete-button' type='button' onclick='deleteContact(event)'>Delete</button>";
 }
 
-// UI class
-class UI{
-    static showAddModal(){
-        addModal.style.display = "block";
-        fullscreenDiv.style.display = "block";
-    }
+function showAddModal() {
+    addModal.style.display = "block";
+    fullscreenDiv.style.display = "block";
+}
 
-    static closeAddModal(){
-        addModal.style.display = "none";
-        fullscreenDiv.style.display = "none";
-    }
-    static showEditModal(){
-        editModal.style.display = "block";
-        fullscreenDiv.style.display = "block";
-    }
+function closeAddModal() {
+    addModal.style.display = "none";
+    fullscreenDiv.style.display = "none";
+}
 
-    static closeEditModal(){
-        editModal.style.display = "none";
-        fullscreenDiv.style.display = "none";
-    }
+function showEditModal() {
+    editModal.style.display = "block";
+    fullscreenDiv.style.display = "block";
+}
+
+function closeEditModal() {
+    editModal.style.display = "none";
+    fullscreenDiv.style.display = "none";
 }
 
 // DOM Content Loaded
@@ -176,22 +160,21 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // event listeners
-function eventListeners(){
+function eventListeners() {
     // show add item modal
     addBtn.addEventListener('click', () => {
         addForm.reset();
         document.getElementById('modal-title').innerHTML = "Add Contact";
-        UI.showAddModal();
+        showAddModal();
     });
 
     // close add item modal
-    closeBtn.addEventListener('click', UI.closeAddModal);
+    closeBtn.addEventListener('click', closeAddModal);
 
     // close edit item modal
-    closeEditBtn.addEventListener('click', UI.closeEditModal);
-
-	saveBtn.addEventListener('click', () => {
-        location.reload();
-        UI.closeModal();
+    closeEditBtn.addEventListener('click', closeEditModal);
+    saveBtn.addEventListener('click', () => {
+        // location.reload();
+        closeEditModal();
     });
 }

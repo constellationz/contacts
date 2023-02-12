@@ -3,29 +3,32 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/code.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
   <header>
-    <h1>Contact Manager</h1>
-    <img src="images/userpic.png">
+    <img src="images/yellowbook.svg">
+    <h1>The Yellow Book</h1>
   </header>
   <main class="login-bubble">
-      <img src="images/rotaryphone.png">
       <h2>Register</h2>
-      <input id="registerFirstName" type="text" placeholder="First Name" style="margin:10px" maxlength="50" autofocus>
-      <input id="registerLastName" type="text" placeholder="Last Name" style="margin:10px" maxlength="50" />
-      <input id="registerLogin" type="text" placeholder="Username" style="margin:10px" maxlength="50" />
-      <input id="registerPassword" type="password" placeholder="Password" style="margin:10px" maxlength="50" />
-      <a href="index.html">
-        <button class="login-button">Go Back</button>
-      </a>
-      <button class="login-button" onclick="doRegister();">Register</button>
-      <span id="loginResult"></span>
+      <label class="inputHeader">First Name</label>
+      <input id="registerFirstName" type="text" placeholder="First Name" maxlength="50" autofocus>
+      <label class="inputHeader">Last Name</label>
+      <input id="registerLastName" type="text" placeholder="Last Name" maxlength="50" />
+      <label class="inputHeader">Username</label>
+      <input id="registerLogin" type="text" placeholder="Username" maxlength="50" />
+      <label class="inputHeader">Password</label>
+      <input id="registerPassword" type="password" placeholder="Password" maxlength="50" />
+      <span id="registerResult"></span>
+      <button class="login-button buttongreen" onclick="doRegister();">Register</button>
+      <button class="login-button" onclick="window.location.href='index.html'">Go back</button>
   </main>
   <footer class="foot">
-    POOSD small project
   </footer>
 </body>
 </html>

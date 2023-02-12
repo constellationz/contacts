@@ -13,12 +13,28 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("INSERT INTO Users (FirstName, LastName, Login, Password) VALUES (?, ?, ?, ?)");
-		$stmt->bind_param("ssss", $firstName, $lastName, $login, $password);
-		$stmt->execute();
-		$stmt->close();
-		$conn->close();
-		returnWithError("");
+		$test = $conn->prepare("SELECT ID FROM Users WHERE Login=?");
+		$test->bind_param("s", $login);
+		$test->execute();
+
+		$result = $test->get_result();
+
+		if ($result->num_rows != 0)
+		{
+			$test->close();
+			$conn->close();
+			returnWithError("Error: User Already Exists");
+		}
+		else
+		{
+			$stmt = $conn->prepare("INSERT INTO Users (FirstName, LastName, Login, Password) VALUES (?, ?, ?, ?)");
+			$stmt->bind_param("ssss", $firstName, $lastName, $login, $password);
+			$stmt->execute();
+			$test->close();
+			$stmt->close();
+			$conn->close();
+			returnWithError("");
+		}
 	}
 
 	function getRequestInfo()
