@@ -82,7 +82,7 @@ Sophia Deangelo [@SopaKitchen](https://github.com/SopaKitchen) API and database
 
 # Live Demo!
 
-[Take me to The Yellow Book](https://theyellowbookcop4331.com)
+[Take me to The Yellow Book](http://theyellowbookcop4331.com)
 
 ---
 
@@ -92,7 +92,7 @@ Check out our code at
 [github.com/constellationz/contacts](https://github.com/constellationz/contacts)
 
 Visit our website at
-[theyellowbookcop4331.com](https://theyellowbookcop4331.com)
+[theyellowbookcop4331.com](http://theyellowbookcop4331.com)
 
 ---
 
