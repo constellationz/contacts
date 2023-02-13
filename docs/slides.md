@@ -76,7 +76,7 @@ Sophia Deangelo [@SopaKitchen](https://github.com/SopaKitchen) API and database
 
 [API Demonstration on SwaggerHub](https://app.swaggerhub.com/apis/SOPHIAD/Contacts/1.0.0)
 
-[Backup Video](https://www.youtube.com)
+[Backup Video](https://youtu.be/cpEbJRTRQvM)
 
 ---
 
