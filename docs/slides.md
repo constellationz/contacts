@@ -9,9 +9,9 @@ theme: uncover
 
 # The Yellow Book
 
-# ![align:center width:300px](https://raw.githubusercontent.com/constellationz/contacts/main/images/yellowbook.svg)
+# ![align:center width:250px](https://raw.githubusercontent.com/constellationz/contacts/main/images/yellowbook.svg)
 
-It's like a phonebook.
+An online contact manager.
 
 ---
 
@@ -82,11 +82,20 @@ Sophia Deangelo [@SopaKitchen](https://github.com/SopaKitchen) API and database
 
 # Live Demo!
 
-[Take me to The Yellow Book](http://test.theyellowbookcop4331.com)
+[Take me to The Yellow Book](https://theyellowbookcop4331.com)
 
 ---
 
+# Some links...
+
+Check out our code at
+[github.com/constellationz/contacts](https://github.com/constellationz/contacts)
+
+Visit our website at
+[theyellowbookcop4331.com](https://theyellowbookcop4331.com)
+
+---
+
+### Any questions?
 
 ![width:800px](https://sciphile.org/sites/default/files/users/guy/media/PhoneBooks.jpg)
-
- **Any questions?**
